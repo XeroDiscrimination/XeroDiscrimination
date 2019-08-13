@@ -34,7 +34,7 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 	* Member: **Jianzhen (Olivia) Long** (Back-end Developer, Tester) _@u5474453_
 	* Member: **Chunxiang (Carson) Song** (Back-end Developer) _@u6302158_
 	* Member: **Zheng (Henry) Xiang** (Back-end Developer) _@u6469050_
-* Tutor: **Catherine J**
+* Tutor: **Catherine Jaktman**, Email: Catherine.Jaktman@anu.edu.au
 ### Stakeholders
 * Client:
 	* Xero: **Shreyas Nagarajappa**, **Han Zhang**, **Mehika Manocha**, **Amanda Li**
