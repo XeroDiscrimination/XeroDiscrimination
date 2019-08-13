@@ -2,13 +2,14 @@
 # XeroDiscrimination
 TechLauncher Project 2019 S2
 ---
-### :link: Quick Links
->* [**GitHub Repository**](https://github.com/Utkarsh-Marwaha/XeroDiscrimination)
->	* [IssueBoard]()
->	* [Milestones]()
->	* [Minimum Viable Product]()
->* [**Google Drive**](https://drive.google.com/drive/folders/16or-qAWaP47zYRBujUtLxquibFVMffwd)
+:link: **Quick Links**
+> * [**GitHub Repository**](https://github.com/Utkarsh-Marwaha/XeroDiscrimination)
+> 	* [IssueBoard]()
+> 	* [Milestones]()
+>	* [Minimum Viable Product (MVP)]()
+> * [**Google Drive**](https://drive.google.com/drive/folders/16or-qAWaP47zYRBujUtLxquibFVMffwd)
 >	* [Project Management Artefacts](https://drive.google.com/drive/folders/1v0GWsU9ErW8Ai3fZqNvh769EgjhSD1yo)
+>		* [Statement of Work (SoW)](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)
 
 
 ## :round_pushpin: Overview
