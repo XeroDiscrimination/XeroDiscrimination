@@ -4,7 +4,7 @@ TechLauncher Project 2019 S2
 ---
 :link: **Quick Links**
 > * [**GitHub Repository**](https://github.com/Utkarsh-Marwaha/XeroDiscrimination)
-> 	* [IssueBoard]()
+> 	* [Issue Board](https://github.com/Utkarsh-Marwaha/XeroDiscrimination/labels#workspaces/rainbow7-5d521985c4594626b3600b43/board?repos=202042365)
 > 	* [Milestones]()
 >	* [Minimum Viable Product (MVP)]()
 > * [**Google Drive**](https://drive.google.com/drive/folders/16or-qAWaP47zYRBujUtLxquibFVMffwd)
