@@ -1,3 +1,4 @@
+![readme-banner](Assets/readme-banner/readme-banner.png)
 # XeroDiscrimination
 TechLauncher Project 2019 S2
 ---
