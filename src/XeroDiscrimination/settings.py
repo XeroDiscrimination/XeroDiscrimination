@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #django packages
+    'ckeditor',
+
+    #django apps
+    'accounts',
+    'jobs',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +61,7 @@ ROOT_URLCONF = 'XeroDiscrimination.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,6 +122,53 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
+# https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Static Files
+# Adds the sitewide static folder so that Django can search it too
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
+
+# Media Files
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
+
+
+# Custom User Model
+AUTH_USER_MODEL = 'accounts.User'
+
+# Login config
+LOGIN_URL = '/login'
+LOGOUT_REDIRECT_URL = '/'
+
+# Messages style config
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'is-link',
+    messages.INFO: 'is-info',
+    messages.SUCCESS: 'is-success',
+    messages.WARNING: 'is-warning',
+    messages.ERROR: 'is-danger',
+}
+
+# CKEDITOR Settings
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}
