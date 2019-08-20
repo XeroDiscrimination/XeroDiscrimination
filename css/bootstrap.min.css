@@ -4050,6 +4050,7 @@ input[type=submit].btn-block {
 
 .nav-link {
     display: block;
+    /* font-weight: bold; */
     padding: .5rem 1rem
 }
 
