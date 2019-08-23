@@ -7825,14 +7825,20 @@ h1, h2, h3, h4, h5,
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .services .icon {
+    text-align: center;
     line-height: 1.3;
     position: relative; }
     .services .icon span {
       font-size: 60px;
       color: #157efb; }
-  .services .media-body h3 {
-    font-size: 18px;
-    font-weight: 500; }
+  .services .media-body {
+    text-align: center; 
+  }
+    .services .media-body h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 500;
+    }
 
 .list-services {
   margin-top: 40px;
