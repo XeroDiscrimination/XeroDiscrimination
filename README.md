@@ -22,6 +22,7 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 
 ### Minimal Viable Product - Iteration 1
 * **[Statement of Work](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)**
+* **[User Story Map](https://drive.google.com/open?id=1PS4gMNf0QJ2Y59hs9PiB_H7XSiubzW37)**
 
 
 ## :round_pushpin: Project Team and Stakeholders
