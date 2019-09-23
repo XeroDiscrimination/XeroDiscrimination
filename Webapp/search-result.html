@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Xero Discrimination - Search Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Xero Discrimination</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="profile.html" class="nav-link">Partners</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+<!--                <li class="nav-item cta mr-md-2"><a href="new-post.html" class="nav-link">Sign Up</a></li>-->
+<!--                <li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Sign In</a></li>-->
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+<section class="ftco-section img" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Jobs we found for you</span>
+                <h2 class="mb-4"><span>Job</span> Result</h2>
+            </div>
+        </div>
+		
+        <!-- This should be done by the backend instead -->
+		<div id="searchresultsdiv">
+		</div>
+        <script>
+		function getAllUrlParams(url) {
+
+  // get query string from url (optional) or window
+  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+  // we'll store the parameters here
+  var obj = {};
+
+  // if query string exists
+  if (queryString) {
+
+    // stuff after # is not part of query string, so get rid of it
+    queryString = queryString.split('#')[0];
+
+    // split our query string into its component parts
+    var arr = queryString.split('&');
+
+    for (var i = 0; i < arr.length; i++) {
+      // separate the keys and the values
+      var a = arr[i].split('=');
+
+      // set parameter name and value (use 'true' if empty)
+      var paramName = a[0];
+      var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+      // (optional) keep case consistent
+      paramName = paramName.toLowerCase();
+      if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+      // if the paramName ends with square brackets, e.g. colors[] or colors[2]
+      if (paramName.match(/\[(\d+)?\]$/)) {
+
+        // create key if it doesn't exist
+        var key = paramName.replace(/\[(\d+)?\]/, '');
+        if (!obj[key]) obj[key] = [];
+
+        // if it's an indexed array e.g. colors[2]
+        if (paramName.match(/\[\d+\]$/)) {
+          // get the index value and add the entry at the appropriate position
+          var index = /\[(\d+)\]/.exec(paramName)[1];
+          obj[key][index] = paramValue;
+        } else {
+          // otherwise add the value to the end of the array
+          obj[key].push(paramValue);
+        }
+      } else {
+        // we're dealing with a string
+        if (!obj[paramName]) {
+          // if it doesn't exist, create property
+          obj[paramName] = paramValue;
+        } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+          // if property does exist and it's a string, convert it to an array
+          obj[paramName] = [obj[paramName]];
+          obj[paramName].push(paramValue);
+        } else {
+          // otherwise add the property
+          obj[paramName].push(paramValue);
+        }
+      }
+    }
+  }
+
+  return obj;
+}
+		
+		jobtypes = ["Full", "Part", "Full/Part", "Permanent", "Temporary", "Casual"];
+		function jobtypestring(jobtype) {
+			console.log("jt: " + jobtype)
+			return jobtypes[parseInt(jobtype)];
+		}
+		function jobtypecolour(jobtype) {
+			return hsl(jobtype/jobtypes.size(),100,80);
+		}
+		
+		params = getAllUrlParams();
+		searchcompanyname = params.companyname;
+		searchloc = params.loc;
+		searchjobtype = params.jobtype;
+		
+		
+		
+        data = [{"companyname":"Ballarat Community Health","jobtitle":"Mental Health Support Worker","jobtype":1,"loc":"Ballarot, VIC","jobwebsite":"https://bch.recruitmenthub.com.au/Vacancies/4873127/title/Mental-Health-Support-Worker","companywebsite":"https://bchc.org.au/"},{"companyname":"Ballarat Community Health","jobtitle":"Reception & Administration Officer (Internal Only)","jobtype":1,"loc":"Ballarot, VIC","jobwebsite":"https://bch.recruitmenthub.com.au/Vacancies/4871756/title/Reception-Administration-Officer-Internal-Only-","companywebsite":"https://bchc.org.au/"},{"companyname":"Ballarat Community Health","jobtitle":"Administration Officer (Alcohol & Other Drugs)","jobtype":1,"loc":"Ballarot, VIC","jobwebsite":"https://bch.recruitmenthub.com.au/Vacancies/4867253/title/Administration-Officer-Alcohol-Other-Drugs-","companywebsite":"https://bchc.org.au/"},{"companyname":"Banyule City Council","jobtitle":"Manager Environment and Place","jobtype":3,"loc":"Greensborough, VIC","jobwebsite":"https://banyulecity.mercury.com.au/ViewPosition.aspx?id=Spo/PrFc7HI=&jbc=ere","companywebsite":"https://www.banyule.vic.gov.au/Home"},{"companyname":"Banyule City Council","jobtitle":"Asset Management Team Leader","jobtype":3,"loc":"Greensborough, VIC","jobwebsite":"https://banyulecity.mercury.com.au/ViewPosition.aspx?id=sGCopsobEsE=&jbc=ere","companywebsite":"https://www.banyule.vic.gov.au/Home"},{"companyname":"Banyule City Council","jobtitle":"Early Childhood Educator - Degree","jobtype":3,"loc":"Greensborough, VIC","jobwebsite":"https://banyulecity.mercury.com.au/ViewPosition.aspx?id=BriUN+dcukQ=&jbc=ere","companywebsite":"https://www.banyule.vic.gov.au/Home"},{"companyname":"Banyule City Council","jobtitle":"Senior Accountant","jobtype":3,"loc":"Greensborough, VIC","jobwebsite":"https://banyulecity.mercury.com.au/ViewPosition.aspx?id=KH4sRwTFbzM=&jbc=ere","companywebsite":"https://www.banyule.vic.gov.au/Home"},{"companyname":"Banyule City Council","jobtitle":"Technical Administrative Assistant","jobtype":4,"loc":"Greensborough, VIC","jobwebsite":"https://banyulecity.mercury.com.au/ViewPosition.aspx?id=vHPHYOJHsCQ=&jbc=ere","companywebsite":"https://www.banyule.vic.gov.au/Home"},{"companyname":"Banyule City Council","jobtitle":"Banyule Leisure Customer Experience Coordinator","jobtype":3,"loc":"Greensborough, VIC","jobwebsite":"https://banyulecity.mercury.com.au/ViewPosition.aspx?id=pK6MjTz0+yM=&jbc=ere","companywebsite":"https://www.banyule.vic.gov.au/Home"},{"companyname":"Brophy Family and Youth Services","jobtitle":"Housing Support and Linkages Worker (CS038)","jobtype":0,"loc":"Warrnambool, VIC","jobwebsite":"https://brophy.org.au/job-vacancies","companywebsite":"https://brophy.org.au/"},{"companyname":"City of Whittlesea","jobtitle":"Plant Operator Line Marking","jobtype":0,"loc":"Melbourn, VIC","jobwebsite":"https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=477036","companywebsite":"https://www.whittlesea.vic.gov.au/"},{"companyname":"City of Whittlesea","jobtitle":"Strategic Transport Planner/Engineer","jobtype":0,"loc":"Melbourn, VIC","jobwebsite":"https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=477293","companywebsite":"https://www.whittlesea.vic.gov.au/"},{"companyname":"City of Whittlesea","jobtitle":"Strategic Planner","jobtype":0,"loc":"Melbourn, VIC","jobwebsite":"https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=477521","companywebsite":"https://www.whittlesea.vic.gov.au/"},{"companyname":"City of Whittlesea","jobtitle":"Social Support Program Lead – Aboriginal/Torres Strait Islander Identified Position","jobtype":1,"loc":"Melbourn, VIC","jobwebsite":"https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=478368","companywebsite":"https://www.whittlesea.vic.gov.au/"},{"companyname":"City of Whittlesea","jobtitle":"Developer Contributions and Finance Accountant","jobtype":0,"loc":"Melbourn, VIC","jobwebsite":"https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=478611","companywebsite":"https://www.whittlesea.vic.gov.au/"},{"companyname":"Cobaw Community Health","jobtitle":"Support Coordinator","jobtype":4,"loc":"Kyneton, VIC/ Romsey, VIC","jobwebsite":"https://www.cobaw.org.au/support-coordinator/","companywebsite":"https://www.cobaw.org.au/"},{"companyname":"Cobaw Community Health","jobtitle":"Speech Pathologist – Child","jobtype":5,"loc":"Woodend, VIC/ Romsey, VIC","jobwebsite":"https://www.cobaw.org.au/speech-pathologist-child/","companywebsite":"https://www.cobaw.org.au/"},{"companyname":"Cobaw Community Health","jobtitle":"Client Service Support Officer","jobtype":0,"loc":"Woodend, VIC/ Romsey, VIC","jobwebsite":"https://www.cobaw.org.au/client-service-support-officer/","companywebsite":"https://www.cobaw.org.au/"},{"companyname":"Cobaw Community Health","jobtitle":"Alcohol and Other Drug Counsellor","jobtype":5,"loc":"Romsey, VIC","jobwebsite":"https://www.cobaw.org.au/alcohol-and-other-drug-counsellor-3/","companywebsite":"https://www.cobaw.org.au/"},{"companyname":"Cobaw Community Health","jobtitle":"5 Receptionist/Administration Officer","jobtype":5,"loc":"Kyneton, VIC/ Romsey, VIC","jobwebsite":"https://www.cobaw.org.au/5-receptionist-administration-officer-3/","companywebsite":"https://www.cobaw.org.au/"},{"companyname":"ECH","jobtitle":"Activity Assistant","jobtype":5,"loc":"Happy Valley, SA","jobwebsite":"https://ech.applynow.net.au/jobs/ECH625-activity-assistant","companywebsite":"https://www.ech.asn.au/"},{"companyname":"Grampians Community Health","jobtitle":"Support Coordinator","jobtype":1,"loc":"Ararat, VIC","jobwebsite":"https://grampianscommunityhealth.org.au/wp-content/uploads/sites/15/20190829-Support-Coordinator-Position-description-closes-23-September-2019.pdf","companywebsite":"https://grampianscommunityhealth.org.au/"},{"companyname":"Grampians Community Health","jobtitle":"Senior Family Violence Support Practitioner","jobtype":0,"loc":"Stawell, VIC","jobwebsite":"https://grampianscommunityhealth.org.au/wp-content/uploads/sites/15/20190820-Senior-FV-Support-Practitioner-closes-23-September-2019.pdf","companywebsite":"https://grampianscommunityhealth.org.au/"},{"companyname":"Grampians Community Health","jobtitle":"Male Perpetrator Support Worker","jobtype":1,"loc":"Stawell, VIC/ Horsham, VIC","jobwebsite":"https://grampianscommunityhealth.org.au/wp-content/uploads/sites/15/20190827-Male-Perpetrator-Support-Worker-closes-23-September-2019.pdf","companywebsite":"https://grampianscommunityhealth.org.au/"},{"companyname":"Grampians Community Health","jobtitle":"Individual Support Worker","jobtype":5,"loc":"Ararat, VIC","jobwebsite":"https://grampianscommunityhealth.org.au/wp-content/uploads/sites/15/20190410-Individual-Support-Worker-Position-Description-2019.pdf","companywebsite":"https://grampianscommunityhealth.org.au/"},{"companyname":"Mind Australia","jobtitle":"Advocacy Coordinator","jobtype":0,"loc":"Heidelberg, VIC","jobwebsite":"https://mindaustralia.mercury.com.au/ViewPosition.aspx?id=2EWcP31vZx0=&jbc=ere","companywebsite":"https://www.mindaustralia.org.au/"},{"companyname":"Mind Australia","jobtitle":"Research Coordinator","jobtype":0,"loc":"Heidelberg, VIC","jobwebsite":"https://mindaustralia.mercury.com.au/ViewPosition.aspx?id=hRFyqxceDPE=&jbc=ere","companywebsite":"https://www.mindaustralia.org.au/"},{"companyname":"Mind Australia","jobtitle":"Community Mental Health Practitioner","jobtype":0,"loc":"Nunawading, VIC","jobwebsite":"https://mindaustralia.mercury.com.au/ViewPosition.aspx?id=touxoujnTBM=&jbc=ere","companywebsite":"https://www.mindaustralia.org.au/"},{"companyname":"Uniting","jobtitle":"Financial Counsellor","jobtype":5,"loc":"Dubbo, NSW","jobwebsite":"https://unitingcareers.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&returnToEvent=jobs.listJobs&jobid=8C38F913-B64E-3625-9F3B-AD2B75D8B8DC&CurATC=EXT&CurBID=62AFB35D%2D9273%2D4A11%2D8DCC%2D9DB401354197&JobListID=22FC4F47%2DE994%2D46A3%2DB8C9%2D9BC901269F43&jobsListKey=43b2c49d%2D8256%2D46dd%2Da473%2D2eb552352cbe&persistVariables=CurATC,CurBID,JobListID,jobsListKey&lid=05590750008","companywebsite":"https://www.uniting.org/home"},{"companyname":"Uniting","jobtitle":"Certified Support Worker","jobtype":1,"loc":"Sutherland Shire, NSW","jobwebsite":"https://unitingcareers.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&returnToEvent=jobs.listJobs&jobid=6D032126-387D-801B-5D54-AD479E68C9CF&CurATC=EXT&CurBID=62AFB35D%2D9273%2D4A11%2D8DCC%2D9DB401354197&JobListID=22FC4F47%2DE994%2D46A3%2DB8C9%2D9BC901269F43&jobsListKey=43b2c49d%2D8256%2D46dd%2Da473%2D2eb552352cbe&persistVariables=CurATC,CurBID,JobListID,jobsListKey,JobID&lid=05590750028","companywebsite":"https://www.uniting.org/home"},{"companyname":"Uniting","jobtitle":"Care Service Worker","jobtype":5,"loc":"Tamworth, NSW","jobwebsite":"https://unitingcareers.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&returnToEvent=jobs.listJobs&jobid=0E671CA8-A9D2-E619-5127-AD8E676CF68A&CurATC=EXT&CurBID=62AFB35D%2D9273%2D4A11%2D8DCC%2D9DB401354197&JobListID=22FC4F47%2DE994%2D46A3%2DB8C9%2D9BC901269F43&jobsListKey=43b2c49d%2D8256%2D46dd%2Da473%2D2eb552352cbe&persistVariables=CurATC,CurBID,JobListID,jobsListKey,JobID&lid=05590750068","companywebsite":"https://www.uniting.org/home"}]
+		console.log(data)
+		if (searchcompanyname) {
+			data =  data.filter(d => d.companyname.toLowerCase().includes(searchcompanyname.toLowerCase()));
+		}
+		console.log(data)
+		if (searchloc) {
+			data =  data.filter(d => d.loc.toLowerCase().includes(searchloc.toLowerCase()));
+		}
+		console.log(data)
+		console.log(searchjobtype + " " + jobtypestring(searchjobtype));
+		if (searchjobtype) {
+			data =  data.filter(d => d.jobtype == searchjobtype); //Need to fix this! Jobtypes are inconsistent.
+		}
+		console.log(data)
+		
+		
+		
+		function resultBlock(jobtitle, jobtype, companyname, loc, companywebsite, lovereact) {
+			heart1 = '<a href="#" class="btn btn-danger rounded-circle btn-favorite d-flex align-items-center">';
+			heart2 = '<a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">';
+			love = (lovereact) ? heart1 : heart2;
+
+            return '<div class="row"> <div class="col-md-12 ftco-animate"><div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center"><div class="mb-4 mb-md-0 mr-5"> <div class="job-post-item-header d-flex align-items-center"> <h2 class="mr-3 text-black h3">' + jobtitle + '</h2> <div class="badge-wrap"> <span class="bg-primary text-white badge py-2 px-3">' + jobtype + '</span> </div> </div> <div class="job-post-item-body d-block d-md-flex"> <div class="mr-3"><span class="icon-layers"></span> <a href="' + companywebsite + '">' + companyname + '</a></div> <div><span class="icon-my_location"></span> <span>' + loc + '</span></div> </div> </div><div class="ml-auto d-flex"> <!-- Button trigger modal --><button type="button" class="btn btn-primary py-2 mr-1" data-toggle="modal" data-target="#exampleModal">Apply for Job</button> ' + love + ' <span class="icon-heart"></span> </a> </div> </div> </div>';
+        }
+
+		
+        for (var i = 0; i < data.length; i++) {
+			var job = data[i];
+			sr = document.getElementById("searchresultsdiv");
+			sr.innerHTML += resultBlock(job.jobtitle, jobtypestring(job.jobtype), job.companyname, job.loc, job.companywebsite, true);
+        }
+
+        </script>
+
+        <!--  ----------------------------------------- -->
+
+        <!-- end -->
+<!--
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul>
+                        <li><a href="#">&lt;</a></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+		-->
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade ftco-animate" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-200 font-weight-bold">Apply for Job</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <input type="text" id="form34" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type="email" id="form29" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <input type="text" id="form32" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                </div>
+
+                <div class="md-form">
+                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                    <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Search Result End -->
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Rainbow's End</h2>
+                    <p>The Rainbow Tick is a national accreditation program for organisations that are committed to safe and inclusive practice, and service delivery for Lesbian, Gay, Bisexual, Transgender and Intersex (LGBTI) people.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Employers</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-2 d-block">How it works</a></li>
+                        <li><a href="#" class="py-2 d-block">Register</a></li>
+                        <li><a href="#" class="py-2 d-block">Post a Job</a></li>
+                        <li><a href="#" class="py-2 d-block">Advance Skill Search</a></li>
+                        <li><a href="#" class="py-2 d-block">Recruiting Service</a></li>
+                        <li><a href="#" class="py-2 d-block">Blog</a></li>
+                        <li><a href="#" class="py-2 d-block">Faq</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Workers</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-2 d-block">How it works</a></li>
+                        <li><a href="#" class="py-2 d-block">Register</a></li>
+                        <li><a href="#" class="py-2 d-block">Post Your Skills</a></li>
+                        <li><a href="#" class="py-2 d-block">Job Search</a></li>
+                        <li><a href="#" class="py-2 d-block">Emploer Search</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have any Question?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">10 Rudd Street, Canberra, ACT, Australia</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+61 xxxx xxxx</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">xxxx@xxxx.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+    <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+</svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<!-- script src="js/jquery.timepicker.min.js"></script -->
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
