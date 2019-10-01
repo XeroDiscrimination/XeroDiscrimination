@@ -131,7 +131,7 @@ STATIC_URL = '/static/'
 # Adds the sitewide static folder so that Django can search it too
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'statics'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
