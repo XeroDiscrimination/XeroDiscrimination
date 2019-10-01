@@ -131,10 +131,10 @@ STATIC_URL = '/static/'
 # Adds the sitewide static folder so that Django can search it too
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'statics'),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
 
 # Media Files
 
