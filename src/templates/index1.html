@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <title>XeroDiscriminationPortal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="{% static 'index' %}">Xero Discrimination</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="{% url 'rainbow_tick' %}" class="nav-link">Partners</a></li>
+                <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+                <!--                <li class="nav-item cta mr-md-2"><a href="new-post.html" class="nav-link">Sign Up</a></li>-->
+                <!--                <li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Sign In</a></li>-->
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+<div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+            <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We have <span class="number" data-number="850000">0</span> great job offers you deserve!</p>
+                <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Your Dream <br><span>Job is Waiting</span></h1>
+
+                <div class="ftco-search">
+                    <div class="row">
+                        <div class="col-md-12 nav-link-wrap">
+                            <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Find a Job</a>
+
+                                <!-- a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Find a Candidate</a -->
+
+                            </div>
+                        </div>
+                        <div class="col-md-12 tab-wrap">
+
+                            <div class="tab-content p-4" id="v-pills-tabContent">
+
+                                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+                                    <form action="{% static 'search-result.html' %}" method="get" class="search-job">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <div class="form-field">
+                                                        <div class="icon"><span class="icon-briefcase"></span></div>
+                                                        <input type="text" name="companyname" class="form-control" placeholder="eg. Officer, Coordinator">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <div class="form-field">
+                                                        <div class="select-wrap">
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <select name="jobtype" class="form-control">
+                                                                <option value="">Category</option>
+                                                                <option value="0">Full</option>
+                                                                <option value="1">Part</option>
+                                                                <option value="2">Full/Part</option>
+                                                                <option value="3">Permanent</option>
+                                                                <option value="4">Temporary</option>
+																<option value="5">Casual</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <div class="form-field">
+                                                        <div class="icon"><span class="icon-map-marker"></span></div>
+                                                        <input type="text" name="loc" class="form-control" placeholder="Location">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <div class="form-field">
+                                                        <input type="submit" value="Search" class="form-control btn btn-primary">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+<!--                                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">-->
+<!--                                    <form action="#" class="search-job">-->
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-md">-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <div class="form-field">-->
+<!--                                                        <div class="icon"><span class="icon-user"></span></div>-->
+<!--                                                        <input type="text" class="form-control" placeholder="eg. Adam Scott">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-md">-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <div class="form-field">-->
+<!--                                                        <div class="select-wrap">-->
+<!--                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>-->
+<!--                                                            <select name="" id="" class="form-control">-->
+<!--                                                                <option value="">Category</option>-->
+<!--                                                                <option value="">Full Time</option>-->
+<!--                                                                <option value="">Part Time</option>-->
+<!--                                                                <option value="">Freelance</option>-->
+<!--                                                                <option value="">Internship</option>-->
+<!--                                                                <option value="">Temporary</option>-->
+<!--                                                            </select>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-md">-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <div class="form-field">-->
+<!--                                                        <div class="icon"><span class="icon-map-marker"></span></div>-->
+<!--                                                        <input type="text" class="form-control" placeholder="Location">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-md">-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <div class="form-field">-->
+<!--                                                        <input type="submit" value="Search" class="form-control btn btn-primary">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </form>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section services-section bg-light">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block">
+                    <!-- <div class="icon"><span class="flaticon1-landmark"></span></div> -->
+                    <div class="icon"><img src="{% static './images/flaticon-png/png/008-canberra.png' %}" style="width: 90px; height: 90px;"/></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">We Are Canberra</h3>
+                        <p>One of the most welcoming and inclusive city in Australia. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block">
+                    <!-- <div class="icon"><span class="flaticon-collaboration"></span></div> -->
+                    <div class="icon"><img src="{% static './images/flaticon-png/png/001-lgbtq.png' %}" style="width: 90px; height: 90px;"/></div>
+                    <!-- <div class="icon"><img src="./images/flaticon-png/png/001-lgbtq.png"/> </span> </div> -->
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Greatest Community</h3>
+                        <p>We celebrate pride, diversity, individuality, and sexuality.  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block">
+                    <!-- <div class="icon"><span class="flaticon-promotions"></span></div> -->
+                    <div class="icon"><img src="{% static './images/flaticon-png/png/003-gender-identity.png' %}" style="width: 90px; height: 90px;" /></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">We Value Individuals</h3>
+                        <p>Always With Pronouns. Respect every opinions. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block">
+                    <div class="icon"><img src="{% static './images/flaticon-png/png/002-lgtb.png' %}"style="width: 90px; height: 90px;" /></div>
+                    <!-- <div class="icon"><span class="flaticon1-landmark"></span></div> -->
+                    <div class="media-body">
+                        <h3 class="heading mb-3">They Are Ticked</h3>
+                        <p>Organizations with "Rainbow Tick" are prioritized. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-counter">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Categories work wating for you (Coming soon...)</span>
+                <h2 class="mb-4"><span>Current</span> Job Posts</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 ftco-animate">
+                <ul class="category">
+                    <li><a href="#">Web Development <span class="number" data-number="1000">0</span></a></li>
+                    <li><a href="#">Graphic Designer <span class="number" data-number="1000">0</span></a></li>
+                    <li><a href="#">Multimedia <span class="number" data-number="2000">0</span></a></li>
+                    <li><a href="#">Advertising <span class="number" data-number="900">0</span></a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <ul class="category">
+                    <li><a href="#">Education &amp; Training <span class="number" data-number="3500">0</span></a></li>
+                    <li><a href="#">English <span class="number" data-number="1560">0</span></a></li>
+                    <li><a href="#">Social Media <span class="number" data-number="1000">0</span></a></li>
+                    <li><a href="#">Writing <span class="number" data-number="2500">0</span></a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <ul class="category">
+                    <li><a href="#">PHP Programming <span class="number" data-number="5500">0</span></a></li>
+                    <li><a href="#">Project Management <span class="number" data-number="2000">0</span></a></li>
+                    <li><a href="#">Finance Management <span class="number" data-number="800">0</span></a></li>
+                    <li><a href="#">Office &amp; Admin <span class="number" data-number="7000">0</span></a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <ul class="category">
+                    <li><a href="#">Web Designer <span><span class="number" data-number="8000">0</span></span></a></li>
+                    <li><a href="#">Customer Service <span class="number" data-number="4000">0</span></a></li>
+                    <li><a href="#">Marketing &amp; Sales <span class="number" data-number="3300">0</span></a></li>
+                    <li><a href="#">Software Development <span class="number" data-number="1356">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/bg_1.jpg' %} );" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="1350000">0</strong>
+                                <span>Jobs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="40000">0</strong>
+                                <span>Members</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="30000">0</strong>
+                                <span>Resume</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="10500">0</strong>
+                                <span>Company</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading">Testimonial</span>
+                <h2 class="mb-4"><span>Top</span> Stories</h2>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel ftco-owl">
+                    <div class="item">
+                        <div class="testimony-wrap py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url({% static 'images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4">XeroDiscrimination offered great helps to me when finding jobs. </p>
+                                <p class="name">Sharon</p>
+                                <span class="position">Marketing Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url({% static 'images/person_2.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4">I found my dream job through this website! </p>
+                                <p class="name">Roger</p>
+                                <span class="position">Interface Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url({% static 'images/person_3.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4">My experience with XeroDiscrimination when hunting jobs was lovely! Will definitely recommand it!</p>
+                                <p class="name">Jane</p>
+                                <span class="position">Activity Assistant</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url({% static 'images/person_1.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4">The current firm I am working with has obtained high reputation amoung LGBTIQ community. Personally, I really enjoy working with them. </p>
+                                <p class="name">Scott</p>
+                                <span class="position">Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4 pb-5">
+                            <div class="user-img mb-4" style="background-image: url({% static 'images/person_4.jpg' %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4">The job descriptions here is friendly to everyone. </p>
+                                <p class="name">Ava</p>
+                                <span class="position">Retail Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog -->
+<!-- <section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+          <span class="subheading">Our Blog</span>
+        <h2><span>Recent</span> Blog</h2>
+      </div>
+    </div>
+    <div class="row d-flex">
+      <div class="col-md-3 d-flex ftco-animate">
+        <div class="blog-entry align-self-stretch">
+          <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+          </a>
+          <div class="text mt-3">
+              <div class="meta mb-2">
+              <div><a href="#">December 2, 2018</a></div>
+              <div><a href="#">Admin</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto enim non iste maxime optio, ut com</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex ftco-animate">
+        <div class="blog-entry align-self-stretch">
+          <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+          </a>
+          <div class="text mt-3">
+              <div class="meta mb-2">
+              <div><a href="#">December 2, 2018</a></div>
+              <div><a href="#">Admin</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nobis natus incidunt officia assumenda.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex ftco-animate">
+        <div class="blog-entry align-self-stretch">
+          <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+          </a>
+          <div class="text mt-3">
+              <div class="meta mb-2">
+              <div><a href="#">December 2, 2018</a></div>
+              <div><a href="#">Admin</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi obcaecati praesentium,</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex ftco-animate">
+        <div class="blog-entry align-self-stretch">
+          <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+          </a>
+          <div class="text mt-3">
+              <div class="meta mb-2">
+              <div><a href="#">December 2, 2018</a></div>
+              <div><a href="#">Admin</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor minima, dolores quis, dolorum accusamu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Subscribe -->
+<!-- <section class="ftco-section-parallax">
+<div class="parallax-img d-flex align-items-center">
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+      <h2>Subcribe to our Newsletter</h2>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+      <div class="row d-flex justify-content-center mt-4 mb-4">
+        <div class="col-md-8">
+          <form action="#" class="subscribe-form">
+            <div class="form-group d-flex">
+              <input type="text" class="form-control" placeholder="Enter email address">
+              <input type="submit" value="Subscribe" class="submit px-3">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Rainbow's End</h2>
+                    <p>The Rainbow Tick is a national accreditation program for organisations that are committed to safe and inclusive practice, and service delivery for Lesbian, Gay, Bisexual, Transgender and Intersex (LGBTI) people.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Employers</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-2 d-block">How it works (N/A)</a></li>
+                        <li><a href="#" class="py-2 d-block">Register (N/A)</a></li>
+                        <li><a href="#" class="py-2 d-block">Post a Job (N/A)</a></li>
+                        <li><a href="#" class="py-2 d-block">Advance Skill Search (N/A)</a></li>
+                        <li><a href="#" class="py-2 d-block">Recruiting Service (N/A)</a></li>
+                        <!-- <li><a href="#" class="py-2 d-block">Blog</a></li> -->
+                        <li><a href="#" class="py-2 d-block">FAQ (N/A)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Job Seekers</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-2 d-block">How it works (N/A)</a></li>
+                        <li><a href="#" class="py-2 d-block">Register (N/A)</a></li>
+                        <li><a href="#" class="py-2 d-block">Post Your Skills (N/A)</a></li>
+                        <li><a href="#" class="py-2 d-block">Job Search (N/A)</a></li>
+                        <li><a href="#" class="py-2 d-block">Employer Search (N/A)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have any Question?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">10 Rudd Street, Canberra, ACT, Australia</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+61 xxxx xxxx</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">xxxx@xxxx.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+<script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+<script src="{% static 'js/scrollax.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="{% static 'js/google-map.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

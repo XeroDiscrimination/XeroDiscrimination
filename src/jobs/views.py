@@ -9,11 +9,11 @@ def about(request):
 
 def contact(request):
 
-    return render(request,'contact.html')
+    return render(request,'contact1.html')
 
 def index(request):
 
-    return render(request,'index.html')
+    return render(request,'index1.html')
 
 def rainbow_tick(request):
 
