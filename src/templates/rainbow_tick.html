@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<!-- arthor: Yishun Shi -->
+
+
+<head>
+    <title>Rainbow Tick</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+
+    <!-- Main Stylesheet File -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/rainbow-tick.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">Xero Discrimination</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+                    <li class="nav-item active"><a href="{% url 'rainbow_tick' %}" class="nav-link">Partners</a></li>
+                    <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+                    <!--                <li class="nav-item cta mr-md-2"><a href="new-post.html" class="nav-link">Sign Up</a></li>-->
+                    <!--                <li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Sign In</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
+                <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
+                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home<i class="ion-ios-arrow-forward"></i></a></span> <span>Rainbow Tick</span></p>
+                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Rainbow Tick</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-about d-md-flex">
+        <div class="one-half img" style="background-image: url({% static 'images/rainbow-tick-list/rainbow-tick.png' %});" data-stellar-background-ratio="0.8"></div>
+        <div class="one-half ftco-animate">
+            <div class="heading-section ftco-animate ">
+                <h2 class="mb-4"><span>What's The Rainbow Tick</span></h2>
+            </div>
+            <div>
+                <blockquote class="blockquote">
+                    <p>The Rainbow Tick is a national accreditation program for organisations that are committed to safe and inclusive practice, and service delivery for Lesbian, Gay, Bisexual, Transgender and Intersex (LGBTI) people. Organisations wishing
+                        to receive a Rainbow Tick are required to undergo accreditation against the Rainbow Tick Standards, owned and developed by Rainbow Health Victoria (formerly GLHV). </p>
+                    <p>The Rainbow Tick Accreditation Program supports organisations to understand and implement LGBTI safe and inclusive service delivery and provides national recognition for those that meet the Rainbow Tick Standards. The Rainbow Tick
+                        Accreditation Program is a voluntary program and aims to assist organisations to move from LGBTI-friendly to LGBTI-inclusive while reassuring LGBTI consumers and staff that an organisation is aware of, is responsive to and is understanding
+                        of their needs.
+                    </p>
+                    <footer class="blockquote-footer">From <a href="https://www.qip.com.au/standards/rainbow-tick-standards/">Rainbow Tick Standards</a> website</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Rainbow Tick Highlight-->
+    <section id="portfolio" class="section-bg">
+        <div class="container">
+
+            <header class="section-header">
+                <h3 class="section-title" style="font-family: 'Montserrat', sans-serif">Accredited Organisations Highlight</h3>
+            </header>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">Youth & Aged Service</li>
+                        <li data-filter=".filter-card">Health Care</li>
+                        <li data-filter=".filter-web">Other</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'images/rainbow-tick-list/Brophy_Family_and_Youth_Services_1.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>
+                                <a href="organisation.html">Brophy</a>
+                            </h4>
+                            <p>Youth Service</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/Brophy_Family_and_Youth_Services_1.jpg' %}" data-lightbox="portfolio" data-title="Brophy" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/BrophyFamilyandYouthServices.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'images/rainbow-tick-list/Uniting_1.jpeg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="https://www.uniting.org/home">Uniting</a></h4>
+                            <p>Other</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/Uniting_1.jpeg' %}" class="link-preview" data-lightbox="portfolio" data-title="Uniting" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/Uniting.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+                    <div class="portfolio-wrap">
+                        <img src="images/rainbow-tick-list/City_of_Whittlesea_Youth_Services_1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="https://www.whittlesea.vic.gov.au/community-support/young-people/youth-services/">City of Whittlesea</a></h4>
+                            <p>Youth Service</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/City_of_Whittlesea_Youth_Services_1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="City of Whittlesea" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/CityofWhittlesea.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'images/rainbow-tick-list/Cobaw_Community_Health_Services_1.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="https://www.cobaw.org.au/services-a-z/communitysupport/diversity/">Cobaw Community Health</a></h4>
+                            <p>Health Care</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/Cobaw_Community_Health_Services_1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Cobaw Community Health" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/CobawCommunityHealth.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'images/rainbow-tick-list/Mind_Australia_1.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="https://www.mindaustralia.org.au/">Mind Australia</a></h4>
+                            <p>Other</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/Mind_Australia_1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Mind Australia" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/MindAustralia.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'images/rainbow-tick-list/Banyule_City_Council_Aged_and_Disability_Support_Program_1.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="https://www.banyule.vic.gov.au/Community-services">Banyule City Council</a></h4>
+                            <p>Company</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/Banyule_City_Council_Aged_and_Disability_Support_Program_1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Banyule City Council" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/BanyuleCityCouncil.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'images/rainbow-tick-list/Ballarat_Community_Health_1.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="https://bchc.org.au/">Ballarat Community</a></h4>
+                            <p>Health Care</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/Ballarat_Community_Health_1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Ballarat Community" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/BallaratCommunityHealth.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'images/rainbow-tick-list/Grampians_Community_Health_1.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="https://grampianscommunityhealth.org.au/sexuality-and-gender-diversity/">Grampians Community</a></h4>
+                            <p>Health Care</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/Grampians_Community_Health_1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Grampians Community" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/GrampiansCommunityHealth.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'images/rainbow-tick-list/ECH_Incorporated_1.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="https://www.ech.asn.au/about-us/diversity/">ECH Incorporated</a></h4>
+                            <p>Other</p>
+                            <div>
+                                <a href="{% static 'images/rainbow-tick-list/ECH_Incorporated_1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="ECH Incorporated" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="{% static 'pages/ECH.html' %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- #portfolio -->
+
+    <!-- Their Jobs -->
+    <section class="ftco-section img" style="background-image: url({% static 'images/bg_3.jpg' %});" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <span class="subheading">Jobs from Rainbow Tick Accredited Organisations</span>
+                    <h2 class="mb-4"><span>Their</span> Jobs</h2>
+                </div>
+            </div>
+
+            <!-- This should be done by the backend instead -->
+            <div id="searchresultsdiv">
+            </div>
+            <script>
+                data = [{
+                    "companyname": "Ballarat Community Health",
+                    "jobtitle": "Mental Health Support Worker",
+                    "jobtype": "Part",
+                    "loc": "Ballarat, VIC",
+                    "jobwebsite": "https://bch.recruitmenthub.com.au/Vacancies/4873127/title/Mental-Health-Support-Worker",
+                    "companywebsite": "pages/BallaratCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Ballarat Community Health",
+                    "jobtitle": "Reception & Administration Officer (Internal Only)",
+                    "jobtype": "Part",
+                    "loc": "Ballarat, VIC",
+                    "jobwebsite": "https://bch.recruitmenthub.com.au/Vacancies/4871756/title/Reception-Administration-Officer-Internal-Only-",
+                    "companywebsite": "pages/BallaratCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Ballarat Community Health",
+                    "jobtitle": "Administration Officer (Alcohol & Other Drugs)",
+                    "jobtype": "Part",
+                    "loc": "Ballarat, VIC",
+                    "jobwebsite": "https://bch.recruitmenthub.com.au/Vacancies/4867253/title/Administration-Officer-Alcohol-Other-Drugs-",
+                    "companywebsite": "pages/BallaratCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Banyule City Council",
+                    "jobtitle": "Manager Environment and Place",
+                    "jobtype": "Permanent",
+                    "loc": "Greensborough, VIC",
+                    "jobwebsite": "https://banyulecity.mercury.com.au/ViewPosition.aspx?id=Spo/PrFc7HI=&jbc=ere",
+                    "companywebsite": "pages/BanyuleCityCouncil.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Banyule City Council",
+                    "jobtitle": "Asset Management Team Leader",
+                    "jobtype": "Permanent",
+                    "loc": "Greensborough, VIC",
+                    "jobwebsite": "https://banyulecity.mercury.com.au/ViewPosition.aspx?id=sGCopsobEsE=&jbc=ere",
+                    "companywebsite": "pages/BanyuleCityCouncil.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Banyule City Council",
+                    "jobtitle": "Early Childhood Educator - Degree",
+                    "jobtype": "Permanent",
+                    "loc": "Greensborough, VIC",
+                    "jobwebsite": "https://banyulecity.mercury.com.au/ViewPosition.aspx?id=BriUN+dcukQ=&jbc=ere",
+                    "companywebsite": "pages/BanyuleCityCouncil.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Banyule City Council",
+                    "jobtitle": "Senior Accountant",
+                    "jobtype": "Permanent",
+                    "loc": "Greensborough, VIC",
+                    "jobwebsite": "https://banyulecity.mercury.com.au/ViewPosition.aspx?id=KH4sRwTFbzM=&jbc=ere",
+                    "companywebsite": "pages/BanyuleCityCouncil.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Banyule City Council",
+                    "jobtitle": "Technical Administrative Assistant",
+                    "jobtype": "Temporary",
+                    "loc": "Greensborough, VIC",
+                    "jobwebsite": "https://banyulecity.mercury.com.au/ViewPosition.aspx?id=vHPHYOJHsCQ=&jbc=ere",
+                    "companywebsite": "pages/BanyuleCityCouncil.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Banyule City Council",
+                    "jobtitle": "Banyule Leisure Customer Experience Coordinator",
+                    "jobtype": "Permanent",
+                    "loc": "Greensborough, VIC",
+                    "jobwebsite": "https://banyulecity.mercury.com.au/ViewPosition.aspx?id=pK6MjTz0+yM=&jbc=ere",
+                    "companywebsite": "pages/BanyuleCityCouncil.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Brophy Family and Youth Services",
+                    "jobtitle": "Housing Support and Linkages Worker (CS038)",
+                    "jobtype": "Full",
+                    "loc": "Warrnambool, VIC",
+                    "jobwebsite": "https://brophy.org.au/job-vacancies",
+                    "companywebsite": "pages/BrophyFamilyandYouthServices.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "City of Whittlesea",
+                    "jobtitle": "Plant Operator Line Marking",
+                    "jobtype": "Full",
+                    "loc": "Melbourne, VIC",
+                    "jobwebsite": "https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=477036",
+                    "companywebsite": "pages/CityofWhittlesea.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "City of Whittlesea",
+                    "jobtitle": "Strategic Transport Planner/Engineer",
+                    "jobtype": "Full",
+                    "loc": "Melbourne, VIC",
+                    "jobwebsite": "https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=477293",
+                    "companywebsite": "pages/CityofWhittlesea.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "City of Whittlesea",
+                    "jobtitle": "Strategic Planner",
+                    "jobtype": "Full",
+                    "loc": "Melbourne, VIC",
+                    "jobwebsite": "https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=477521",
+                    "companywebsite": "pages/CityofWhittlesea.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "City of Whittlesea",
+                    "jobtitle": "Social Support Program Lead - Aboriginal/Torres Strait Islander Identified Position",
+                    "jobtype": "Part",
+                    "loc": "Melbourne, VIC",
+                    "jobwebsite": "https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=478368",
+                    "companywebsite": "pages/CityofWhittlesea.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "City of Whittlesea",
+                    "jobtitle": "Developer Contributions and Finance Accountant",
+                    "jobtype": "Full",
+                    "loc": "Melbourne, VIC",
+                    "jobwebsite": "https://whittlesea.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=478611",
+                    "companywebsite": "pages/CityofWhittlesea.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Cobaw Community Health",
+                    "jobtitle": "Support Coordinator",
+                    "jobtype": "Temporary",
+                    "loc": "Kyneton, VIC/ Romsey, VIC",
+                    "jobwebsite": "https://www.cobaw.org.au/support-coordinator/",
+                    "companywebsite": "pages/CobawCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Cobaw Community Health",
+                    "jobtitle": "Speech Pathologist - Child",
+                    "jobtype": "Casual",
+                    "loc": "Woodend, VIC/ Romsey, VIC",
+                    "jobwebsite": "https://www.cobaw.org.au/speech-pathologist-child/",
+                    "companywebsite": "pages/CobawCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Cobaw Community Health",
+                    "jobtitle": "Client Service Support Officer",
+                    "jobtype": "Full",
+                    "loc": "Woodend, VIC/ Romsey, VIC",
+                    "jobwebsite": "https://www.cobaw.org.au/client-service-support-officer/",
+                    "companywebsite": "pages/CobawCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Cobaw Community Health",
+                    "jobtitle": "Alcohol and Other Drug Counsellor",
+                    "jobtype": "Casual",
+                    "loc": "Romsey, VIC",
+                    "jobwebsite": "https://www.cobaw.org.au/alcohol-and-other-drug-counsellor-3/",
+                    "companywebsite": "pages/CobawCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Cobaw Community Health",
+                    "jobtitle": "5 Receptionist/Administration Officer",
+                    "jobtype": "Casual",
+                    "loc": "Kyneton, VIC/ Romsey, VIC",
+                    "jobwebsite": "https://www.cobaw.org.au/5-receptionist-administration-officer-3/",
+                    "companywebsite": "pages/CobawCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "ECH",
+                    "jobtitle": "Activity Assistant",
+                    "jobtype": "Casual",
+                    "loc": "Happy Valley, SA",
+                    "jobwebsite": "https://ech.applynow.net.au/jobs/ECH625-activity-assistant",
+                    "companywebsite": "pages/ECH.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Grampians Community Health",
+                    "jobtitle": "Support Coordinator",
+                    "jobtype": "Part",
+                    "loc": "Ararat, VIC",
+                    "jobwebsite": "https://grampianscommunityhealth.org.au/wp-content/uploads/sites/15/20190829-Support-Coordinator-Position-description-closes-23-September-2019.pdf",
+                    "companywebsite": "pages/GrampiansCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Grampians Community Health",
+                    "jobtitle": "Senior Family Violence Support Practitioner",
+                    "jobtype": "Full",
+                    "loc": "Stawell, VIC",
+                    "jobwebsite": "https://grampianscommunityhealth.org.au/wp-content/uploads/sites/15/20190820-Senior-FV-Support-Practitioner-closes-23-September-2019.pdf",
+                    "companywebsite": "pages/GrampiansCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Grampians Community Health",
+                    "jobtitle": "Male Perpetrator Support Worker",
+                    "jobtype": "Part",
+                    "loc": "Stawell, VIC/ Horsham, VIC",
+                    "jobwebsite": "https://grampianscommunityhealth.org.au/wp-content/uploads/sites/15/20190827-Male-Perpetrator-Support-Worker-closes-23-September-2019.pdf",
+                    "companywebsite": "pages/GrampiansCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Grampians Community Health",
+                    "jobtitle": "Individual Support Worker",
+                    "jobtype": "Casual",
+                    "loc": "Ararat, VIC",
+                    "jobwebsite": "https://grampianscommunityhealth.org.au/wp-content/uploads/sites/15/20190410-Individual-Support-Worker-Position-Description-2019.pdf",
+                    "companywebsite": "pages/GrampiansCommunityHealth.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Mind Australia",
+                    "jobtitle": "Advocacy Coordinator",
+                    "jobtype": "Full",
+                    "loc": "Heidelberg, VIC",
+                    "jobwebsite": "https://mindaustralia.mercury.com.au/ViewPosition.aspx?id=2EWcP31vZx0=&jbc=ere",
+                    "companywebsite": "pages/MindAustralia.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Mind Australia",
+                    "jobtitle": "Research Coordinator",
+                    "jobtype": "Full",
+                    "loc": "Heidelberg, VIC",
+                    "jobwebsite": "https://mindaustralia.mercury.com.au/ViewPosition.aspx?id=hRFyqxceDPE=&jbc=ere",
+                    "companywebsite": "pages/MindAustralia.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Mind Australia",
+                    "jobtitle": "Community Mental Health Practitioner",
+                    "jobtype": "Full",
+                    "loc": "Nunawading, VIC",
+                    "jobwebsite": "https://mindaustralia.mercury.com.au/ViewPosition.aspx?id=touxoujnTBM=&jbc=ere",
+                    "companywebsite": "pages/MindAustralia.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Uniting",
+                    "jobtitle": "Financial Counsellor",
+                    "jobtype": "Casual",
+                    "loc": "Dubbo, NSW",
+                    "jobwebsite": "https://unitingcareers.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&returnToEvent=jobs.listJobs&jobid=8C38F913-B64E-3625-9F3B-AD2B75D8B8DC&CurATC=EXT&CurBID=62AFB35D%2D9273%2D4A11%2D8DCC%2D9DB401354197&JobListID=22FC4F47%2DE994%2D46A3%2DB8C9%2D9BC901269F43&jobsListKey=43b2c49d%2D8256%2D46dd%2Da473%2D2eb552352cbe&persistVariables=CurATC,CurBID,JobListID,jobsListKey&lid=05590750008",
+                    "companywebsite": "pages/Uniting.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Uniting",
+                    "jobtitle": "Certified Support Worker",
+                    "jobtype": "Part",
+                    "loc": "Sutherland Shire, NSW",
+                    "jobwebsite": "https://unitingcareers.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&returnToEvent=jobs.listJobs&jobid=6D032126-387D-801B-5D54-AD479E68C9CF&CurATC=EXT&CurBID=62AFB35D%2D9273%2D4A11%2D8DCC%2D9DB401354197&JobListID=22FC4F47%2DE994%2D46A3%2DB8C9%2D9BC901269F43&jobsListKey=43b2c49d%2D8256%2D46dd%2Da473%2D2eb552352cbe&persistVariables=CurATC,CurBID,JobListID,jobsListKey,JobID&lid=05590750028",
+                    "companywebsite": "pages/Uniting.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Uniting",
+                    "jobtitle": "Care Service Worker",
+                    "jobtype": "Casual",
+                    "loc": "Tamworth, NSW",
+                    "jobwebsite": "https://unitingcareers.nga.net.au/cp/index.cfm?event=jobs.checkJobDetailsNewApplication&returnToEvent=jobs.listJobs&jobid=0E671CA8-A9D2-E619-5127-AD8E676CF68A&CurATC=EXT&CurBID=62AFB35D%2D9273%2D4A11%2D8DCC%2D9DB401354197&JobListID=22FC4F47%2DE994%2D46A3%2DB8C9%2D9BC901269F43&jobsListKey=43b2c49d%2D8256%2D46dd%2Da473%2D2eb552352cbe&persistVariables=CurATC,CurBID,JobListID,jobsListKey,JobID&lid=05590750068",
+                    "companywebsite": "pages/Uniting.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Xero",
+                    "jobtitle": "Product Designer",
+                    "jobtype": "Full",
+                    "loc": "Canberra, ACT",
+                    "jobwebsite": "https://www.xero.com/au/about/careers/job/ffb1639171aced3d7129d16bf63369ad5cb96d8da99853647cace98f28137371/",
+                    "companywebsite": "pages/xero.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Xero",
+                    "jobtitle": "First Impressions Coordinator",
+                    "jobtype": "Full",
+                    "loc": "Canberra, ACT",
+                    "jobwebsite": "https://www.xero.com/au/about/careers/job/19131fa71aa296df6e3368cb034687952f02586df6ab80b61d9a34ae9bb6167b/",
+                    "companywebsite": "pages/xero.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Xero",
+                    "jobtitle": "Quality Engineer",
+                    "jobtype": "Full",
+                    "loc": "Canberra, ACT",
+                    "jobwebsite": "https://www.xero.com/au/about/careers/job/c3853bd171fd4147989be8d855dbf60171697b02928dc41678e6503a402b3123/",
+                    "companywebsite": "pages/xero.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Xero",
+                    "jobtitle": ".NET Developer",
+                    "jobtype": "Full",
+                    "loc": "Canberra, ACT",
+                    "jobwebsite": "https://www.xero.com/au/about/careers/job/4a67ec7136432f68fe97a978f106af651cefd9ab9553c9a68a28b225f89b79fb/",
+                    "companywebsite": "pages/xero.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "Xero",
+                    "jobtitle": "Senior Account Manager",
+                    "jobtype": "Full",
+                    "loc": "Sydney, NSW",
+                    "jobwebsite": "https://www.xero.com/au/about/careers/job/89cd226efa320fdcacdf4203f447a57d9d0c5c713554913952a33ced1ab36695/",
+                    "companywebsite": "pages/xero.html",
+                    "rainbowtick": "yes"
+                }, {
+                    "companyname": "David Jones",
+                    "jobtitle": "Logistics Assistant",
+                    "jobtype": "Full",
+                    "loc": "Canberra, ACT",
+                    "jobwebsite": "http://careers.davidjones.com.au/cw/en/job/524387/logistics-assistant",
+                    "companywebsite": "https://www.davidjones.com/careers",
+                    "rainbowtick": "no"
+                }, {
+                    "companyname": "David Jones",
+                    "jobtitle": "Sales Professional Opportunities in Our ACT Stores",
+                    "jobtype": "Casual",
+                    "loc": "Canberra, ACT",
+                    "jobwebsite": "http://careers.davidjones.com.au/cw/en/job/523885/sales-professional-opportunities-in-our-act-stores",
+                    "companywebsite": "https://www.davidjones.com/careers",
+                    "rainbowtick": "no"
+                }, {
+                    "companyname": "David Jones",
+                    "jobtitle": "Sales Professional Opportunities at Green Hills",
+                    "jobtype": "Casual",
+                    "loc": "Newcastle, NSW",
+                    "jobwebsite": "http://careers.davidjones.com.au/cw/en/job/523831/sales-professional-opportunities-at-green-hills",
+                    "companywebsite": "https://www.davidjones.com/careers",
+                    "rainbowtick": "no"
+                }, {
+                    "companyname": "David Jones",
+                    "jobtitle": "Beauty Counter Specialists",
+                    "jobtype": "Full/Part",
+                    "loc": "Brisbane, QLD",
+                    "jobwebsite": "http://careers.davidjones.com.au/cw/en/job/523622/beauty-counter-specialists-david-jones",
+                    "companywebsite": "https://www.davidjones.com/careers",
+                    "rainbowtick": "no"
+                }]
+
+                function resultBlock(jobtitle, jobtype, companyname, loc, lovereact) {
+                    heart1 = '<a href="#" class="btn btn-danger rounded-circle btn-favorite d-flex align-items-center">';
+                    heart2 = '<a href="#" class="btn btn-secondary rounded-circle btn-favorite d-flex align-items-center icon">';
+                    love = (lovereact) ? heart1 : heart2;
+                    return '<div class="row"> <div class="col-md-12 ftco-animate"><div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center"><div class="mb-4 mb-md-0 mr-5"> <div class="job-post-item-header d-flex align-items-center"> <h2 class="mr-3 text-black h3">' + jobtitle + '</h2> <div class="badge-wrap"> <span class="bg-primary text-white badge py-2 px-3">' + jobtype + '</span> </div> </div> <div class="job-post-item-body d-block d-md-flex"> <div class="mr-3"><span class="icon-layers"></span> <a href="#">' + companyname + '</a></div> <div><span class="icon-my_location"></span> <span>' + loc + '</span></div> </div> </div><div class="ml-auto d-flex"> <a href="job-single.html" class="btn btn-primary py-2 mr-1">Apply for Job</a> ' + love + ' <span class="icon-heart"></span> </a> </div> </div> </div>';
+                }
+
+
+                for (var i = 0; i < data.length; i++) {
+                    var job = data[i];
+                    sr = document.getElementById("searchresultsdiv");
+                    sr.innerHTML += resultBlock(job.jobtitle, job.jobtype, job.companyname, job.loc, true);
+                }
+            </script>
+
+            <!--  ----------------------------------------- -->
+
+            <!-- end -->
+            <!--            <div class="row mt-5">-->
+            <!--                <div class="col text-center">-->
+            <!--                    <div class="block-27">-->
+            <!--                        <ul>-->
+            <!--                            <li><a href="#">&lt;</a></li>-->
+            <!--                            <li class="active"><span>1</span></li>-->
+            <!--                            <li><a href="#">2</a></li>-->
+            <!--                            <li><a href="#">3</a></li>-->
+            <!--                            <li><a href="#">4</a></li>-->
+            <!--                            <li><a href="#">5</a></li>-->
+            <!--                            <li><a href="#">&gt;</a></li>-->
+            <!--                        </ul>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+    </section>
+    <!-- Their Job End -->
+
+    <!-- Full List -->
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row d-flex mb-5">
+                <div class="col-md-12 mb-4">
+                    <h2 class="h3">Rainbow Tick Accredited Organisations Full List (To be implemented)</h2>
+                </div>
+
+                <div class="accordion w-100" id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="heading">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+                                    Full List
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapse" class="collapse show" aria-labelledby="heading" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Ballarat Community Health
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Company information to be implemented:)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Banyule City Council
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Company information to be implemented:)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Brophy Family and Youth Services
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Company information to be implemented:)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                And more...
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            More companies will be added:)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Eull List End -->
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Rainbow's End</h2>
+                        <p>The Rainbow Tick is a national accreditation program for organisations that are committed to safe and inclusive practice, and service delivery for Lesbian, Gay, Bisexual, Transgender and Intersex (LGBTI) people.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Employers</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">How it works (N/A)</a></li>
+                            <li><a href="#" class="py-2 d-block">Register (N/A)</a></li>
+                            <li><a href="#" class="py-2 d-block">Post a Job (N/A)</a></li>
+                            <li><a href="#" class="py-2 d-block">Advance Skill Search (N/A)</a></li>
+                            <li><a href="#" class="py-2 d-block">Recruiting Service (N/A)</a></li>
+                            <!-- <li><a href="#" class="py-2 d-block">Blog</a></li> -->
+                            <li><a href="#" class="py-2 d-block">FAQ (N/A)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-4">
+                        <h2 class="ftco-heading-2">Job Seekers</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">How it works (N/A)</a></li>
+                            <li><a href="#" class="py-2 d-block">Register (N/A)</a></li>
+                            <li><a href="#" class="py-2 d-block">Post Your Skills (N/A)</a></li>
+                            <li><a href="#" class="py-2 d-block">Job Search (N/A)</a></li>
+                            <li><a href="#" class="py-2 d-block">Employer Search (N/A)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have any Question?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">10 Rudd Street, Canberra, ACT, Australia</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+61 xxxx xxxx</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">xxxx@xxxx.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+    <!-- script src="js/jquery.timepicker.min.js"></script -->
+    <script src="{% static 'js/scrollax.min.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{% static 'js/google-map.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/mobile-nav/mobile-nav.js' %}"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/rainbow-tick.js' %}"></script>
+
+</body>
+
+</html>
