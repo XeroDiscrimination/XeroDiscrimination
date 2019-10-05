@@ -21,7 +21,7 @@ def rainbow_tick(request):
 
 def search_result(request):
 
-    return render(request,'search-result.html')
+    return render(request,'search-result1.html')
 
 def blog(request):
 
