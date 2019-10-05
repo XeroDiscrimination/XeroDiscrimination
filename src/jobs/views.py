@@ -17,4 +17,32 @@ def index(request):
 
 def rainbow_tick(request):
 
-    return render(request,'rainbow_tick.html')
+    return render(request,'rainbow_tick1.html')
+
+def search_result(request):
+
+    return render(request,'search-result.html')
+
+def blog(request):
+
+    return render(request,'blog1.html')
+
+def new_post(request):
+
+    return render(request,'new-post1.html')
+
+def job_post(request):
+
+    return render(request,'job-post1.html')
+
+def job_single(request):
+
+    return render(request,'job-single1.html')
+
+def profile(request):
+
+    return render(request,'profile1.html')
+
+def organisation(request):
+
+    return render(request,'organisation1.html')
