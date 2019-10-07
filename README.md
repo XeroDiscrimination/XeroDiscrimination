@@ -10,19 +10,22 @@ TechLauncher Project 2019 S2 | Code: 19-S2-2-C Xero Discrimination
 > * [**Google Drive**](https://drive.google.com/drive/folders/16or-qAWaP47zYRBujUtLxquibFVMffwd)
 >  	* [Project Plan](https://drive.google.com/open?id=1SB9oyRcp21_rfohmSQQdtWHxJnV5V1Ay)
 >	* [Statement of Work (SoW)](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)
->	* [Risk Registers](https://drive.google.com/drive/u/0/folders/1PMRCn4jS3Ur-zPC1xj_NW_ijhUyR6ev7)
+>	* [Risk Register](https://drive.google.com/drive/u/0/folders/1PMRCn4jS3Ur-zPC1xj_NW_ijhUyR6ev7)
 >	* [Descision Log](https://drive.google.com/drive/u/0/folders/18XHohg63HihipddTGb2wYRgnH8vlGodf)
 >		* [Descision Making Process Flow Chart](https://drive.google.com/drive/u/0/folders/18XHohg63HihipddTGb2wYRgnH8vlGodf)
+>	* [Feedback Log](https://drive.google.com/open?id=17opM28HwXkN9lNWn-Xqov2nKgrbP8UU318U0HRg5uKo)
 >	* [Meeting Minutes & Related Outcomes](https://drive.google.com/drive/folders/169VP35T8-W4mUahAn6C6lPCQlQS187oB?usp=sharing)
 >		* [Client](https://drive.google.com/open?id=1vc3TeHVgU1Vq6-Y29HxFt1Xkx-3eZDTW) Meeting
 >		* [End User](https://drive.google.com/open?id=1rCV_ug61Qbb6UDWZ5-2Bvz3qek2n9rSn) Meeting
 >		* [Audit](https://drive.google.com/open?id=1kezyvWSLgQJ2wjDgFBhbEjjY67mQWr2M) Meeting	Slides([1](https://drive.google.com/open?id=1tvMuiOZRrwKEXzSXKV5k_O5woK1OUlEq), [2](https://drive.google.com/open?id=14u1La-WundIx87Lg5z1T-w06dZDQP-2A), [3](https://drive.google.com/open?id=1qn2L24XhjbMwlSlg0rkPBNoOpHuxtk2S))
 >		* [Team](https://drive.google.com/open?id=1arzk6l9_O8YybPrH0kaxIwK0ths6L3fP) / [Tutorial](https://drive.google.com/open?id=1C4UaNbOGimv8jshIyIePxW8_cET9NcnZ) Meeting
->	* [Feedback Log](https://drive.google.com/open?id=17opM28HwXkN9lNWn-Xqov2nKgrbP8UU318U0HRg5uKo)
 >	* [End User Testing](https://drive.google.com/open?id=18gqvqGhVzZDWSa4ZrAtFL8qN_p34Or0f)
 >		* [Raw Dataset](https://drive.google.com/open?id=1oOTcOjIXANYLUUetfQKv-XSHVPR-XBBw)
 >		* [Mapping Results]()
 >	* [Showcase Poster](https://drive.google.com/open?id=1ltiUQCcyGbkt4VDQtEBzp-M4R6VGYLvE)
+> * [**Supporting Documents**]()
+>	* [End User Testing Session Snapshots](https://drive.google.com/open?id=15zp7NXvwh1mF8rbWCacpLxMA0dr5QOzW)
+
 
 
 ## :round_pushpin: Overview
