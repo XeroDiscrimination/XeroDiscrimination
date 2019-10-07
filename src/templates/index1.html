@@ -3,13 +3,14 @@
 <html lang="en">
 <head>
     <title>XeroDiscriminationPortal</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900">
 
     <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
@@ -72,21 +73,21 @@
                                 <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Find a Job</a>
 
                                 <!-- a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Find a Candidate</a -->
-
                             </div>
                         </div>
                         <div class="col-md-12 tab-wrap">
 
                             <div class="tab-content p-4" id="v-pills-tabContent">
-
+                            
                                 <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-                                    <form action="{% url 'jobs:search_result' %}" method="get" class="search-job">
+                                    <form action="{% url 'jobs:search_result' %}" method="get" class="search-job"></div>
                                         <div class="row">
+                                        
                                             <div class="col-md">
                                                 <div class="form-group">
                                                     <div class="form-field">
-                                                        <div class="icon"><span class="icon-briefcase"></span></div>
-                                                        <input type="text" name="companyname" class="form-control" placeholder="eg. Officer, Coordinator">
+                                                        <!--<i class="icon-heart"></i>-->
+                                                        <input type="text" name="companyname" class="form-control" placeholder="eg.Officer, Coordinator">
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,7 +95,7 @@
                                                 <div class="form-group">
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <!--<i class="ion-ios-arrow-down"></i>-->
                                                             <select name="jobtype" class="form-control">
                                                                 <option value="">Category</option>
                                                                 <option value="0">Full</option>
@@ -102,7 +103,7 @@
                                                                 <option value="2">Full/Part</option>
                                                                 <option value="3">Permanent</option>
                                                                 <option value="4">Temporary</option>
-																<option value="5">Casual</option>
+                                                                <option value="5">Casual</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -111,7 +112,7 @@
                                             <div class="col-md">
                                                 <div class="form-group">
                                                     <div class="form-field">
-                                                        <div class="icon"><span class="icon-map-marker"></span></div>
+                                                        <!--<i class="icon-map-marker"></i>-->
                                                         <input type="text" name="loc" class="form-control" placeholder="Location">
                                                     </div>
                                                 </div>
@@ -122,7 +123,7 @@
                                                         <input type="submit" value="Search" class="form-control btn btn-primary">
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>        
                                         </div>
                                     </form>
                                 </div>
