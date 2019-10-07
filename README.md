@@ -1,4 +1,4 @@
-![readme-banner](Assets/readme-banner/readme-banner.png)
+![readme-banner](Assets/readme-banner/readme-banner-new.png)
 # XeroDiscrimination
 TechLauncher Project 2019 S2 | Code: 19-S2-2-C Xero Discrimination
 ---
