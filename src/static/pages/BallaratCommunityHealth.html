@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <!-- arthor: Yishun Shi -->
@@ -9,45 +10,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900">
 
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
 
-    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
 
-    <link rel="stylesheet" href="../css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
 
-    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
 
 
-    <link rel="stylesheet" href="../css/flaticon.css">
-    <link rel="stylesheet" href="../css/icomoon.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <link rel="stylesheet" href="../css/employerProfile.css">
+    <link rel="stylesheet" href="{% static 'css/employerProfile.css'">
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">Xero Discrimination</a>
+            <a class="navbar-brand" href="/src/templates/index.html">Xero Discrimination</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
-                    <li class="nav-item active"><a href="../rainbow-tick.html" class="nav-link">Partners</a></li>
-                    <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="/src/templates/index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/src/templates/about.html" class="nav-link">About</a></li>
+                    <li class="nav-item active"><a href="/src/templates/rainbow_tick.html" class="nav-link">Partners</a></li>
+                    <li class="nav-item"><a href="/src/templates/contact.html" class="nav-link">Contact</a></li>
                     <!--                <li class="nav-item cta mr-md-2"><a href="new-post.html" class="nav-link">Sign Up</a></li>-->
                     <!--                <li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Sign In</a></li>-->
 
@@ -80,7 +85,7 @@
                 <div class="col-md-6 ftco-animate">
                     <!-- <h1 class="mb-3 display-3 font-weight-bold">Xero<span class="badge badge-light" style="display: inline; margin-left: 10%"><img class="img-fluid" src="../Assets/logo/rainbow-tick.png" width="10%" height="10%"  alt="rainbow-tick"></span></h1> -->
                     <h1 class="mb-3 display-3 font-weight-bold">Ballarat Community Health
-                        <a href="../rainbow-tick.html"><img class="img-fluid" src="../../Assets/logo/rainbow-tick.png" style="display: inline; margin-left: 5%" width="10%" height="10%" alt="rainbow-tick"></a>
+                        <a href="{% url 'rainbow_tick' %}}"><img class="img-fluid" src="../logo/rainbow-tick.png" style="display: inline; margin-left: 5%" width="10%" height="10%" alt="rainbow-tick"></a>
                     </h1>
                     <span class="badge badge-pill badge-primary">SaaS</span>
                     <span class="badge badge-pill badge-success">Accounting Software</span>
@@ -523,6 +528,7 @@
     </script>
     <script src="../js/google-map.js"></script>
     <script src="../js/main.js"></script>
+
 
 </body>
 
