@@ -23,8 +23,9 @@ TechLauncher Project 2019 S2 | Code: 19-S2-2-C Xero Discrimination
 >		* [Raw Dataset](https://drive.google.com/open?id=1oOTcOjIXANYLUUetfQKv-XSHVPR-XBBw)
 >		* [Mapping Results]()
 >	* [Showcase Poster](https://drive.google.com/open?id=1ltiUQCcyGbkt4VDQtEBzp-M4R6VGYLvE)
-> * [**Supporting Documents**]()
+> * **Supporting Documents**
 >	* [End User Testing Session Snapshots](https://drive.google.com/open?id=15zp7NXvwh1mF8rbWCacpLxMA0dr5QOzW)
+>	* [Client Meeting Snapshots](https://drive.google.com/drive/folders/1WJXr71ocib6bxigVTzI6vIyjT1Pv-xET?usp=sharing)
 
 
 
