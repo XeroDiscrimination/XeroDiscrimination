@@ -28,10 +28,6 @@ urlpatterns = [
     path('profile/',views.profile, name='profile'),
     path('organisation/',views.organisation, name='organisation'),
     path('rainbow_tick/job-single.html',views.job_single, name='job_single'),
-    path('rainbow_tick/blog.html',views.job_single, name='job_single'),
-    path('src/templates/index.html',views.index, name='index1'),
-    path('src/templates/about.html',views.about, name='about1'),
-    path('src/templates/rainbow_tick.html',views.rainbow_tick, name='rb1'),
-    path('src/templates/contact.html',views.contact, name='ct1')
+    path('rainbow_tick/blog.html',views.job_single, name='job_single')
     
 ]
