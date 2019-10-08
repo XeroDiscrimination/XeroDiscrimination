@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+  {% block body_content %}
+    {% load staticfiles %}
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
+          	<p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-about d-md-flex">
+    	<div class="one-half img" style="background-image: url({% static 'images/about.jpg' %});" data-stellar-background-ratio="0.8"></div>
+    	<div class="one-half ftco-animate">
+            <div class="heading-section ftco-animate ">
+                <h2 class="mb-4"><span>We Are Xero Discrimination</span></h2>
+            </div>
+            <div>
+  				<p>We aim to develop a web app for young gender and sexual diverse people in Australia to determine which organisations are likely to make good employers, and research job opportunities with them.</p>
+  			</div>
+    	</div>
+    </section>
+
+    <!--section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Testimonial</span>
+            <h2 class="mb-4"><span>Happy</span> Clients</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section-->
+
+      <section id="team" class="ftco-section"> <!-- team -->
+          <div class="container">
+              <div class="section-header">
+                  <h3>Team</h3>
+                  <p>We have a passionate team, working with multiple organisations across Australia.</p>
+              </div>
+
+              <div class="row">
+
+                  <div class="col-lg-3 col-md-6 ftco-animate">
+                      <div class="member">
+                          <img src="{% static 'images/YWCA.png' %}" class="img-fluid" alt="">
+                          <div class="member-info">
+                              <div class="member-info-content" align="center">
+                                  <h4>YWCA</h4>
+                                  <span>Investor</span>
+                                  <div class="social">
+                                      <a href=""><i class="icon-twitter"></i></a>
+                                      <a href=""><i class="icon-facebook"></i></a>
+                                      <a href=""><i class="icon-google-plus"></i></a>
+                                      <a href=""><i class="icon-linkedin"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 ftco-animate">
+                      <div class="member">
+                          <a href="profile.html"><img src="{% static 'images/xero.png' %}" class="img-fluid" alt=""></a>
+                          <div class="member-info">
+                              <div class="member-info-content" align="center">
+                                  <h4>Xero</h4>
+                                  <span>Tech Support</span>
+                                  <div class="social">
+                                      <a href=""><i class="icon-twitter"></i></a>
+                                      <a href=""><i class="icon-facebook"></i></a>
+                                      <a href=""><i class="icon-google-plus"></i></a>
+                                      <a href=""><i class="icon-linkedin"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 ftco-animate">
+                      <div class="member">
+                          <img src="{% static 'images/ANU.png' %}" class="img-fluid" alt="">
+                          <div class="member-info">
+                              <div class="member-info-content" align="center">
+                                  <h4>Techlauncher</h4>
+                                  <span>Project Starter</span>
+                                  <div class="social">
+                                      <a href=""><i class="icon-twitter"></i></a>
+                                      <a href=""><i class="icon-facebook"></i></a>
+                                      <a href=""><i class="icon-google-plus"></i></a>
+                                      <a href=""><i class="icon-linkedin"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 ftco-animate">
+                      <div class="member">
+                          <img src="{% static 'images/Rainbow7-logo.png' %}" class="img-fluid" alt="">
+                          <div class="member-info">
+                              <div class="member-info-content" align="center">
+                                  <h4>Rainbow 7</h4>
+                                  <span>Developer</span>
+                                  <div class="social">
+                                      <a href=""><i class="icon-twitter"></i></a>
+                                      <a href=""><i class="icon-facebook"></i></a>
+                                      <a href=""><i class="icon-google-plus"></i></a>
+                                      <a href=""><i class="icon-linkedin"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static "images/bg_1.jpg" %});" data-stellar-background-ratio="0.5">
+          <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                      <div class="block-18 text-center">
+                        <div class="text">
+                          <strong class="number" data-number="1350000">0</strong>
+                          <span>Jobs</span>
+                      </div>
+                    </div>
+                  </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                      <div class="block-18 text-center">
+                        <div class="text">
+                          <strong class="number" data-number="40000">0</strong>
+                          <span>Members</span>
+                      </div>
+                    </div>
+                  </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                      <div class="block-18 text-center">
+                        <div class="text">
+                          <strong class="number" data-number="30000">0</strong>
+                          <span>Resume</span>
+                      </div>
+                    </div>
+                  </div>
+                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                      <div class="block-18 text-center">
+                        <div class="text">
+                          <strong class="number" data-number="10500">0</strong>
+                          <span>Company</span>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+        	<div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Rainbow's End</h2>
+              <p>The Rainbow Tick is a national accreditation program for organisations that are committed to safe and inclusive practice, and service delivery for Lesbian, Gay, Bisexual, Transgender and Intersex (LGBTI) people.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Employers</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">How it works (N/A)</a></li>
+                <li><a href="#" class="py-2 d-block">Register (N/A)</a></li>
+                <li><a href="#" class="py-2 d-block">Post a Job (N/A)</a></li>
+                <li><a href="#" class="py-2 d-block">Advance Skill Search (N/A)</a></li>
+                <li><a href="#" class="py-2 d-block">Recruiting Service (N/A)</a></li>
+                <!-- <li><a href="#" class="py-2 d-block">Blog</a></li> -->
+                <li><a href="#" class="py-2 d-block">FAQ (N/A)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Job Seekers</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">How it works (N/A)</a></li>
+                <li><a href="#" class="py-2 d-block">Register (N/A)</a></li>
+                <li><a href="#" class="py-2 d-block">Post Your Skills (N/A)</a></li>
+                <li><a href="#" class="py-2 d-block">Job Search (N/A)</a></li>
+                <li><a href="#" class="py-2 d-block">Employer Search (N/A)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have any Question?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">10 Rudd Street, Canberra, ACT, Australia</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+61 xxxx xxxx</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">xxxx@xxxx.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <!-- script src="js/jquery.timepicker.min.js"></script -->
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/mobile-nav/mobile-nav.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+  <script src="{% static 'js/rainbow-tick.js' %}"></script>
+  
+  {% endblock %}
