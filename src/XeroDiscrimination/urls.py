@@ -26,5 +26,6 @@ urlpatterns = [
     path('rainbow_tick/',views.rainbow_tick,name='rainbow_tick'),
     path('jobs/',include('jobs.url')),
     path('profile/',views.profile, name='profile'),
-    path('organisation/',views.organisation, name='organisation')
+    path('organisation/',views.organisation, name='organisation'),
+    path('rainbow_tick/job-single.html',views.job_single, name='job_single'),
 ]
