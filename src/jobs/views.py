@@ -47,3 +47,7 @@ def profile(request):
 def organisation(request):
 
     return render(request,'organisation1.html')
+
+def job_single(request):
+
+    return render(request,'job-single1.html')
