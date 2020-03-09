@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse 
 from django import forms
+from .models import Job
 
 # Create your views here.
 
@@ -47,3 +48,9 @@ def profile(request):
 def organisation(request):
 
     return render(request,'organisation1.html')
+
+def test(request):
+
+    data = Job.objects.all()
+    data_dir = {'job':data}
+    return render(request,'testforbackend.html',context=data_dir) 

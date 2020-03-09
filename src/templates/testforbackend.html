@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<body>
+    <h1>hello there</h1>
+    <div class="test_data1">
+        {% if job %}
+            <table>
+                <thead>
+                    <th>job title</th>
+                </thead>
+                {% for eachrow in job %}
+                <tr>
+                    <td>{{ eachrow.title }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>no data retreived!</p>
+        {% endif %}     
+    </div>
+</body>
