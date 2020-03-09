@@ -26,6 +26,7 @@ class Migration(migrations.Migration):
                 ('years_of_exp', models.CharField(blank=True, choices=[('entry', 'Entry Level'), ('1-2', '1-2 years'), ('3-5', '3-5 years'), ('6-10', '6-10 years'), ('above 10', 'Above 10 years')], max_length=20, null=True, verbose_name='Years of Experience')),
                 ('salary', models.PositiveIntegerField(blank=True, null=True)),
                 ('description', ckeditor.fields.RichTextField()),
+                # ('Job_status', models.CharField(choices=[('posted','Job Posted'), ('saved', 'Saved but unposted'), ('unsaved', 'Unsaved')], max_length=30)),
                 ('posted_on', models.DateTimeField(auto_now_add=True)),
                 ('updated_on', models.DateTimeField(auto_now=True)),
                 ('company', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='accounts.Company')),
