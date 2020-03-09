@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse 
 from django import forms
 from .models import Job
+from .models import Company
 
 # Create your views here.
 
@@ -54,3 +55,9 @@ def test(request):
     data = Job.objects.all()
     data_dir = {'job':data}
     return render(request,'testforbackend.html',context=data_dir) 
+
+def test1(request):
+
+    data = Company.objects.all()
+    data_dir = {'company':data}
+    return render(request,'testforbackend-company.html',context=data_dir) 

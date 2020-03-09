@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<body>
+    <h1>test for companies list</h1>
+    <div class="test_data2">
+        {% if company %}
+            <table>
+                <thead>
+                    <th>company name</th>
+                </thead>
+                {% for eachrow in company %}
+                <tr>
+                    <td>{{ eachrow.name }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>no data retreived!</p>
+        {% endif %}     
+    </div>
+</body>

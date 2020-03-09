@@ -31,5 +31,6 @@ urlpatterns = [
     path('rainbow_tick/blog.html',views.job_single, name='job_single'),
     
     path('test',views.test, name='test'),
-    
+    path('test1',views.test1, name='test1'),
+
 ]
