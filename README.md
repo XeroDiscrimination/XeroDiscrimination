@@ -1,6 +1,6 @@
 ![readme-banner](Assets/readme-banner/readme-banner-new.png)
 # XeroDiscrimination
-TechLauncher Project 2019 S2 | Code: 19-S2-2-C Xero Discrimination
+TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 ---
 :link: **Quick Links**
 > * [**GitHub Repository**](https://github.com/Utkarsh-Marwaha/XeroDiscrimination)
@@ -47,18 +47,20 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 * Rainbow 7:
 	* Spokesperson: **Utkarsh Marwaha** (Architect, Communicator, Developer) _@u6146791_
 	* Spokesperson: **Zhengqin (Raymond) Luo** (Front-end Developer, UI Designer, Communicator) _@u5469010_
-	* Member: **Yilu (Karmick) Liu** (Front-end Developer, UI Designer, Managerment) _@u6270742_
+	* Member: **Yilu (Karmick) Liu** (Front-end Developer, UI Designer, Coordinator) _@u6270742_
 	* Member: **Yishun (Ethan) Shi** (Front-end Developer, Tester) _@u6598369_
 	* Member: **Jianzhen (Olivia) Long** (Back-end Developer, Tester) _@u5474453_
 	* Member: **Chunxiang (Carson) Song** (Back-end Developer) _@u6302158_
 	* Member: **Zheng (Henry) Xiang** (Back-end Developer) _@u6469050_
-* Tutor: **Catherine Jaktman**, Email: Catherine.Jaktman@anu.edu.au
+* Tutor: **Andrea Parsons**, Email: Andrea.Parsons@anu.edu.au
 ### Stakeholders
 * Client:
-	* Xero: **Shreyas Nagarajappa**, **Han Zhang**, **Mehika Manocha**, **Amanda Li**
+	* Xero: **Amanda Li**, **Shreyas Nagarajappa**, **Han Zhang**, **Mehika Manocha**
 * End-users:
 	* LGBTIQ+ Community
 	* YWCA
+* Shadow:
+	* AssistiveTech
 
 
 ## :round_pushpin: Project Plan and Actions
