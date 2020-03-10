@@ -17,12 +17,12 @@ TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 >	* [Meeting Minutes & Related Outcomes](https://drive.google.com/drive/folders/169VP35T8-W4mUahAn6C6lPCQlQS187oB?usp=sharing)
 >		* [Client](https://drive.google.com/open?id=1vc3TeHVgU1Vq6-Y29HxFt1Xkx-3eZDTW) Meeting
 >		* [End User](https://drive.google.com/open?id=1rCV_ug61Qbb6UDWZ5-2Bvz3qek2n9rSn) Meeting
->		* [Audit](https://drive.google.com/open?id=1kezyvWSLgQJ2wjDgFBhbEjjY67mQWr2M) Meeting: Slides([1](https://drive.google.com/open?id=1tvMuiOZRrwKEXzSXKV5k_O5woK1OUlEq), [2](https://drive.google.com/open?id=14u1La-WundIx87Lg5z1T-w06dZDQP-2A), [3](https://drive.google.com/open?id=1qn2L24XhjbMwlSlg0rkPBNoOpHuxtk2S))
+>		* [Audit](https://drive.google.com/open?id=1kezyvWSLgQJ2wjDgFBhbEjjY67mQWr2M) Meeting: Slides (2019 S2) ([1](https://drive.google.com/open?id=1tvMuiOZRrwKEXzSXKV5k_O5woK1OUlEq), [2](https://drive.google.com/open?id=14u1La-WundIx87Lg5z1T-w06dZDQP-2A), [3](https://drive.google.com/open?id=1qn2L24XhjbMwlSlg0rkPBNoOpHuxtk2S))
 >		* [Team](https://drive.google.com/open?id=1arzk6l9_O8YybPrH0kaxIwK0ths6L3fP) / [Tutorial](https://drive.google.com/open?id=1C4UaNbOGimv8jshIyIePxW8_cET9NcnZ) Meeting
 >	* [End User Testing](https://drive.google.com/open?id=18gqvqGhVzZDWSa4ZrAtFL8qN_p34Or0f)
 >		* [Raw Dataset](https://drive.google.com/open?id=1oOTcOjIXANYLUUetfQKv-XSHVPR-XBBw)
 >		* [Mapping Results](https://drive.google.com/open?id=1B2iga5l2LiMfU-7CfuF2J6yy8ClL2tBl)
->	* [Showcase Poster](https://drive.google.com/open?id=1ltiUQCcyGbkt4VDQtEBzp-M4R6VGYLvE)
+>	* [Showcase Poster (2019 S2)](https://drive.google.com/open?id=1ltiUQCcyGbkt4VDQtEBzp-M4R6VGYLvE)
 > * **Supporting Documents**
 >	* [End User Testing Session Snapshots](https://drive.google.com/open?id=15zp7NXvwh1mF8rbWCacpLxMA0dr5QOzW)
 >	* [Client Meeting Snapshots](https://drive.google.com/drive/folders/1WJXr71ocib6bxigVTzI6vIyjT1Pv-xET?usp=sharing)
