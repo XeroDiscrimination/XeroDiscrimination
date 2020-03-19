@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
-from .models import Company
+from .models import Company, Comment
 from .forms import CommentForm
 
 def company_detail(request, slug):
@@ -23,7 +23,7 @@ def company_detail(request, slug):
     else:
         comment_form = CommentForm()
 
-    return render(request, template_name, {'company': company,
+    return render(request, template_name, {'company': Company,
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
