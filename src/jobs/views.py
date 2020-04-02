@@ -2,6 +2,8 @@ from django.core import serializers
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django import forms
+from .models import Job
+from .models import Company
 
 from jobs.models import Job
 from accounts.models import Company
@@ -54,3 +56,19 @@ def profile(request):
 def organisation(request):
 
     return render(request,'organisation1.html')
+
+def test(request):
+
+    
+    str1 = str(request.GET["companyname"])
+    str2 = str(request.GET["jobtype"])
+    str3 = str(request.GET["loc"])
+    data = Job.objects.filter(job_type=str2)
+    data_dir = {'job':data, 'companyname':str1,'jobtype':str2,'loc':str3}
+    return render(request,'testforbackend.html',context=data_dir) 
+
+def test1(request):
+
+    data = Company.objects.all()
+    data_dir = {'company':data}
+    return render(request,'testforbackend-company.html',context=data_dir) 

@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 
-from .models import User, Applicant, Company, Industry
+from .models import User, Applicant, Company, Industry, Comment
 from .forms import UserAdminCreationForm, UserAdminChangeForm
 
 class UserAdmin(BaseUserAdmin):
@@ -31,6 +31,15 @@ class UserAdmin(BaseUserAdmin):
     search_fields = ('email',)
     ordering = ('email',)
     filter_horizontal = ()
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'body', 'company', 'created_on', 'active')
+    list_filter = ('active', 'created_on')
+    search_fields = ('name', 'email', 'body')
+    actions = ['approve_comments']
+
+    def approve_comments(self, request, queryset):
+        queryset.update(active=True)
 
 admin.site.register(User, UserAdmin)
 

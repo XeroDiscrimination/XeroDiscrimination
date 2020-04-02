@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from jobs import views
+from accounts import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +29,10 @@ urlpatterns = [
     path('profile/',views.profile, name='profile'),
     path('organisation/',views.organisation, name='organisation'),
     path('rainbow_tick/job-single.html',views.job_single, name='job_single'),
-    path('rainbow_tick/blog.html',views.job_single, name='job_single')
+    path('rainbow_tick/blog.html',views.job_single, name='job_single'),
     
+    path('test',views.test, name='test'),
+    path('test1',views.test1, name='test1'),
+    path('company_details/', v.company_detail, name='company_detail')
+
 ]

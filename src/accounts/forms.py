@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 # from django.contrib.admin.widgets import AdminDateWidget
 
-from .models import Applicant, Company
+from .models import Applicant, Company, Comment
 
 User = get_user_model()
 
@@ -51,3 +51,9 @@ class UserAdminChangeForm(forms.ModelForm):
         # This is done here, rather than on the field, because the
         # field does not have access to the initial value
         return self.initial["password"]
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'email', 'body')

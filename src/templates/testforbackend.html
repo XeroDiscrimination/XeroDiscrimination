@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<body>
+    <h1>hello there</h1>
+    <div class="test_data1">
+        {% if job %}
+            <table>
+                <thead>
+                    <th>job title</th>
+                    <th>slug</th>
+                    <th>salary</th>
+                    <th>type</th>
+                </thead>
+                {% for eachrow in job %}
+                <tr>
+                    <td>{{ eachrow.title }}</td>
+                    <td>{{ eachrow.slug }}</td>
+                    <td>{{ eachrow.salary }}</td>
+                    <td>{{ eachrow.job_type }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>no data retreived!</p>
+        {% endif %}     
+    </div>
+    <p>{{companyname}}</p>
+    <p>{{jobtype}}</p>
+    <p>{{loc}}</p>
+</body>
