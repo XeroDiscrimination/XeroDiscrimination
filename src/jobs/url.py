@@ -12,6 +12,4 @@ urlpatterns = [
     path('job_single/',views.job_single,name='job_single'),
     path('test/',views.test, name='test'),
     path('test1/',views.test1, name='test1'),
-    
-
 ]

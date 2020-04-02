@@ -38,14 +38,19 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'body')
     actions = ['approve_comments']
 
+    # prepopulated_fields = {'slug': ('company')} 
+
     def approve_comments(self, request, queryset):
         queryset.update(active=True)
 
 admin.site.register(User, UserAdmin)
 
-admin.site.unregister(Group)
+admin.site.unregister(Group) 
 
 admin.site.register(Applicant)
 admin.site.register(Company)
 
 admin.site.register(Industry)
+
+admin.site.register(Comment, CommentAdmin)
+
