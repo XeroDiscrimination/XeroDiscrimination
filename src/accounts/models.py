@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.utils.translation import gettext_lazy as _
 from django.template.defaultfilters import slugify
-
+from django.urls import reverse
 from .managers import UserManager
 
 
@@ -84,7 +84,7 @@ class Company(models.Model):
     address     = models.CharField(_('company address'), max_length=120, null=True, blank=True)
     slug = models.SlugField(null=False,unique=True)
 
-    class Meta:
+    class Meta: 
         verbose_name_plural = 'Companies'
 
     def __str__(self):
