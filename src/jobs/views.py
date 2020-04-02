@@ -1,6 +1,10 @@
+from django.core import serializers
 from django.shortcuts import render
-from django.http import HttpResponse 
+from django.http import HttpResponse, JsonResponse
 from django import forms
+
+from jobs.models import Job
+from accounts.models import Company
 
 # Create your views here.
 
@@ -22,7 +26,10 @@ def rainbow_tick(request):
 
 def search_result(request):
 
-    return render(request,'search-result1.html')
+    jobs = serializers.serialize('json', Job.objects.all())
+    companies = serializers.serialize('json', Company.objects.all())
+
+    return render(request,'search-result1.html', {'jobs': jobs, 'companies': companies})
 
 def blog(request):
 
