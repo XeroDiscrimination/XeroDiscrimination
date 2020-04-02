@@ -31,6 +31,8 @@ def search_result(request):
     jobs = serializers.serialize('json', Job.objects.all())
     companies = serializers.serialize('json', Company.objects.all())
 
+    # http://127.0.0.1:8000/static/pages/BallaratCommunityHealth.html
+
     return render(request,'search-result1.html', {'jobs': jobs, 'companies': companies})
 
 def blog(request):

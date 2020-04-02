@@ -47,11 +47,7 @@ class Job(models.Model):
     salary              = models.PositiveIntegerField(blank=True, null=True)
     description         = RichTextField()
     # expires_on = models.DateTimeField()
-<<<<<<< HEAD
-    # Job_status          = models.CharField(max_length=10, choices = Job_Status)
-=======
     # Job_status          = models.CharField(max_length=30, choices = Job_Status)
->>>>>>> origin/backend2020S1
     posted_on           = models.DateTimeField(auto_now_add=True)
     updated_on          = models.DateTimeField(auto_now=True)
 
