@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from accounts.views import company_detail, companyListView
+from accounts.views import company_detail, companyListView, recommend_detail
 from django.urls import path
 
 app_name = 'accounts'

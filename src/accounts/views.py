@@ -1,8 +1,8 @@
 # Create your views here.
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import Company, Comment
-from .forms import CommentForm
+from .models import Company, Comment, Recommendations
+from .forms import CommentForm, RecommendForm
 
 def company_detail(request, slug):
     template_name = 'company_detail.html'
@@ -35,3 +35,15 @@ class companyListView(ListView):
 class companyDetailView(DetailView):
     model = Company
     template_name = 'company_detail.html'
+
+def recommend_detail(request):
+    template_name = 'recommend_company.html'
+    new_recommend = None
+    if request.method == 'POST':
+        recommendation_form = RecommendForm(data=request.POST)
+        new_recommend = recommendation_form.save(commit=False)
+        new_recommend.save()
+    else:
+        recommendation_form = RecommendForm()
+    return render(request, template_name, {'new_recommendation': new_recommend,
+                                           'recommendation_form': recommendation_form})
