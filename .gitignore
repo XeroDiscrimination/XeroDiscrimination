@@ -3,8 +3,13 @@
 settings.json
 *ignore*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 */__pycache__
 __pycache__/
+=======
+__pycache__/
+*/__pycache__
+>>>>>>> bf0b37e91a8779900fd370878847ce67e831f74f
 =======
 __pycache__/
 */__pycache__
