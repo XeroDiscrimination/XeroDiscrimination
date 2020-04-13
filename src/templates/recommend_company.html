@@ -1,36 +1,28 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en">
-
-<body>
-    
 {% block content %}
 {% load crispy_forms_tags %}
-    <div class="container">
-      <div class="row">
-        <!-- <div class="col-md-8 card mb-4  mt-3 left  top">
-          <div class="card-body">
-            <h1>{% block title %} {{ company.name }} {% endblock title %}</h1>
-          </div>
-        </div> -->
-        <div class="col-md-8 card mb-4  mt-3 ">
-          <div class="card-body">
-            {% if new_recommendation %}
-            <div class="alert alert-success" role="alert">
-              Your noimation has been submitted! Thank you for your recommendation!
+<div class="modal fade ftco-animate" id="recommend" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Recommend an Organisation</h4>
             </div>
-            {% else %}
-            <h3>Propose a LGBTQI+ Friendly Company</h3>
-            <form method="post" style="margin-top: 1.3em;">
-              {{ recommendation_form.as_p }}
-              {% csrf_token %}
-              <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
-            </form>
-            {% endif %}
-          </div>
+            <div class="modal-body mx-3">
+              {% if new_recommendation %}
+              <div class="alert alert-success" role="alert">
+                Your noimation has been submitted. Thank you for your recommendation!
+              </div>
+              {% else %}
+              <h3>Propose a LGBTQI+ Friendly Company</h3>
+              <form method="post" style="margin-top: 1.3em;">
+                {{ recommendation_form.as_p }}
+                {% csrf_token %}
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="height:40px; width:200px; font-size:large;">Close</button>
+                <button type="submit" class="btn btn-primary" style="height:40px; width:200px; font-size:large;">Submit</button>
+              </form>
+              {% endif %}
+            </div>
         </div>
-      </div>
     </div>
+</div>
 {% endblock content %}
-
-</body>

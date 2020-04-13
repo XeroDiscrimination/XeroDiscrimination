@@ -383,51 +383,15 @@
             </div>
         </div>
         <div class="row justify-content-center ftco-animate mt-5">
-            <button type="button" class="btn btn-primary py-2 mr-1" data-toggle="modal" data-target="#exampleModal" style="height:40px; width:200px; font-size:large;">Recommend</button>
+            <button type="button" class="btn btn-primary py-2 mr-1" data-toggle="modal" data-target="#recommend" style="height:40px; width:200px; font-size:large;">Recommend</button>
         </div>
     </div>
 </section>
 
 <!-- Modal -->
-<div class="modal fade ftco-animate" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Recommend an Organisation</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mx-3">
-                <div class="md-form mb-3">
-                    <input type="text" id="form34" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form34">Your name</label>
-                </div>
-
-                <div class="md-form mb-3">
-                    <input type="email" id="form29" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form29">Your email</label>
-                </div>
-
-                <div class="md-form mb-3">
-                    <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Organisation Name</label>
-                </div>
-
-                <div class="md-form">
-                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
-                    <label data-error="wrong" data-success="right" for="form8">Reason</label>
-                </div>
-
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="height:40px; width:200px; font-size:large;">Close</button>
-                <button type="button" class="btn btn-primary" style="height:40px; width:200px; font-size:large;">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
+{% block modal %}
+{% include 'recommend_company.html' %}
+{% endblock %}
 
 <!-- Blog -->
 <!-- <section class="ftco-section bg-light">
@@ -528,7 +492,7 @@
 </section> -->
 
 {% block footer %}
-    {% include 'footer.html' %}
+{% include 'footer.html' %}
 {% endblock %}
 
 <!-- loader -->

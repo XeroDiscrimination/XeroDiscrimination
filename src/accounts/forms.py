@@ -61,4 +61,4 @@ class CommentForm(forms.ModelForm):
 class RecommendForm(forms.ModelForm):
     class Meta:
         model = Recommendations
-        fields = ('name', 'email', 'organization','reasons')
+        fields = ('name', 'email', 'organization', 'reasons')
