@@ -8,47 +8,43 @@ from .models import Company
 
 def about(request):
     
-    return render(request, 'about1.html')
+    return render(request, 'about.html')
 
 def contact(request):
 
-    return render(request,'contact1.html')
+    return render(request,'contact.html')
 
 def index(request):
 
-    return render(request,'index1.html')
+    return render(request,'index.html')
 
 def rainbow_tick(request):
 
-    return render(request,'rainbow_tick1.html')
+    return render(request,'rainbow_tick.html')
 
 def search_result(request):
 
-    return render(request,'search-result1.html')
-
-def blog(request):
-
-    return render(request,'blog1.html')
+    return render(request,'search-result.html')
 
 def new_post(request):
 
-    return render(request,'new-post1.html')
+    return render(request,'new-post.html')
 
 def job_post(request):
 
-    return render(request,'job-post1.html')
+    return render(request,'job-post.html')
 
 def job_single(request):
 
-    return render(request,'job-single1.html')
+    return render(request,'job-single.html')
 
 def profile(request):
 
-    return render(request,'profile1.html')
+    return render(request,'profile.html')
 
 def organisation(request):
 
-    return render(request,'organisation1.html')
+    return render(request,'organisation.html')
 
 def test(request):
 
