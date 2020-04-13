@@ -23,7 +23,7 @@ def company_detail(request, slug):
     else:
         comment_form = CommentForm()  
  
-    return render(request, template_name, {'company': Company,
+    return render(request, template_name, {'company': company,
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
