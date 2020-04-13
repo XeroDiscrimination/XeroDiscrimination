@@ -3,9 +3,6 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django import forms
 from .models import Job
-from .models import Company
-
-from jobs.models import Job
 from accounts.models import Company
 
 # Create your views here.

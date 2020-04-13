@@ -35,27 +35,9 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}">Xero Discrimination</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About Us</a></li>
-              <li class="nav-item"><a href="{% url 'rainbow_tick' %}" class="nav-link">Partners</a></li>
-              <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
-<!--                <li class="nav-item cta mr-md-2"><a href="new-post.html" class="nav-link">Sign Up</a></li>-->
-<!--                <li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Sign In</a></li>-->
-
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- END nav -->
+{% block section %}
+    {% include 'nav.html' %}
+{% endblock %}
 
 <section class="ftco-section img" style="background-image: url({% static 'images/bg_3.jpg' %});" data-stellar-background-ratio="0.5">
     <div class="container">
@@ -179,14 +161,14 @@
           heart2 = '<a href="#" class="img">';
           love = (rainbowtick) ? heart1 : heart2;
 
-                return '<div class="row"> <div class="col-md-12 ftco-animate"><div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center"><div class="mb-4 mb-md-0 mr-5"> <div class="job-post-item-header d-flex align-items-center"> <h2 class="mr-3 text-black h3"> <a href="' + website +'" style="color:#222222;">' + name + ' </a></h2> <div class="badge-wrap"> </div> </div> <div><span class="icon-my_location"></span> <span>' + state + '</span></div> </div> </div><div class="ml-auto d-flex"> ' + love + ' </a> <!-- Button trigger modal --><button type="button" class="btn btn-primary py-2 mr-1" data-toggle="modal" data-target="#exampleModal">Contact Organisation</button> </div> </div> </div>';
+                return '<div class="row"> <div class="col-md-12 ftco-animate"><div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center"><div class="mb-4 mb-md-0 mr-5"> <div class="job-post-item-header d-flex align-items-center"> <h2 class="mr-3 text-black h3"> <a href="/company_details/'+ website +'" style="color:#222222;">' + name + ' </a></h2> <div class="badge-wrap"> </div> </div> <div><span class="icon-my_location"></span> <span>' + state + '</span></div> </div> <div class="ml-auto d-flex"> ' + love + ' <!-- Button trigger modal --><button type="button" class="btn btn-primary py-2 mr-1" data-toggle="modal" data-target="#contactOrg">Contact Organisation</button> </div> </div> </div>';
             }
 
         
           for (var i = 0; i < companiesData.length; i++) {
             var org = companiesData[i];
             sr = document.getElementById("searchresultsdiv");
-            sr.innerHTML += resultBlock(org.fields.name, org.fields.website, org.fields.state, true);
+            sr.innerHTML += resultBlock(org.fields.name, org.fields.slug, org.fields.state, true);
           }
 
       </script>
@@ -215,7 +197,7 @@
 </section>
 
 <!-- Modal -->
-<div class="modal fade ftco-animate" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade ftco-animate" id="contactOrg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -257,71 +239,9 @@
 
 <!-- Search Result End -->
 
-<footer class="ftco-footer ftco-bg-dark ftco-section">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Rainbow's End</h2>
-                    <p>The Rainbow Tick is a national accreditation program for organisations that are committed to safe and inclusive practice, and service delivery for Lesbian, Gay, Bisexual, Transgender and Intersex (LGBTI+) people.</p>
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Employers</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">How it works (N/A)</a></li>
-                        <li><a href="#" class="py-2 d-block">Register (N/A)</a></li>
-                        <li><a href="#" class="py-2 d-block">Post a Job (N/A)</a></li>
-                        <li><a href="#" class="py-2 d-block">Advance Skill Search (N/A)</a></li>
-                        <li><a href="#" class="py-2 d-block">Recruiting Service (N/A)</a></li>
-                        <!-- <li><a href="#" class="py-2 d-block">Blog</a></li> -->
-                        <li><a href="#" class="py-2 d-block">FAQ (N/A)</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4 ml-md-4">
-                    <h2 class="ftco-heading-2">Job Seekers</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">How it works (N/A)</a></li>
-                        <li><a href="#" class="py-2 d-block">Register (N/A)</a></li>
-                        <li><a href="#" class="py-2 d-block">Post Your Skills (N/A)</a></li>
-                        <li><a href="#" class="py-2 d-block">Job Search (N/A)</a></li>
-                        <li><a href="#" class="py-2 d-block">Employer Search (N/A)</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Have any Question?</h2>
-                    <div class="block-23 mb-3">
-                        <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">10 Rudd Street, Canberra, ACT, Australia</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+61 xxxx xxxx</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">xxxx@xxxx.com</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-
-                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen">

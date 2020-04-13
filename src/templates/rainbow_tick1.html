@@ -50,28 +50,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'index' %}">Xero Discrimination</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About Us</a></li>
-                    <li class="nav-item active"><a href="{% url 'rainbow_tick' %}" class="nav-link">Partners</a></li>
-                    <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
-                    <!--                <li class="nav-item cta mr-md-2"><a href="new-post.html" class="nav-link">Sign Up</a></li>-->
-                    <!--                <li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Sign In</a></li>-->
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- END nav -->
-
+    {% block section %}
+        {% include 'nav.html' %}
+    {% endblock %}
+    
     <div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">

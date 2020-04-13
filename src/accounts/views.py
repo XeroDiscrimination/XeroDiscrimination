@@ -7,8 +7,8 @@ from .forms import CommentForm
 
 def company_detail(request, slug):
     template_name = 'company_detail.html'
-    post = get_object_or_404(Company, slug=slug)
-    comments = post.comments.filter(active=True)
+    company = get_object_or_404(Company, slug=slug)
+    comments = company.comments.filter(active=True)
     new_comment = None 
     # Comment posted
     if request.method == 'POST':
