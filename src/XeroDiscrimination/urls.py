@@ -34,5 +34,6 @@ urlpatterns = [
     path('test',views.test, name='test'),
     path('test1',views.test1, name='test1'),
     # path('company_details', v.company_detail, name='company_detail')
-    path('company_details/', include('accounts.url') )
+    path('company_details/', include('accounts.url') ),
+    path('promote_organization', v.recommend_detail, name='recommend_organization')
 ]

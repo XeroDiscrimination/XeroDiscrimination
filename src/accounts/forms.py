@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 # from django.contrib.admin.widgets import AdminDateWidget
 
-from .models import Applicant, Company, Comment
+from .models import Applicant, Company, Comment, Recommendations
 
 User = get_user_model()
 
@@ -57,3 +57,8 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('name', 'email', 'body')
+
+class RecommendForm(forms.ModelForm):
+    class Meta:
+        model = Recommendations
+        fields = ('name', 'email', 'organization','reasons')

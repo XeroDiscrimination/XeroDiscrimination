@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 
-from .models import User, Applicant, Company, Industry, Comment
+from .models import User, Applicant, Company, Industry, Comment, Recommendations
 from .forms import UserAdminCreationForm, UserAdminChangeForm
 
 class UserAdmin(BaseUserAdmin):
@@ -43,6 +43,18 @@ class CommentAdmin(admin.ModelAdmin):
     def approve_comments(self, request, queryset):
         queryset.update(active=True)
 
+
+class RecommendationsAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'organization', 'reasons', 'created_on', 'active')
+    list_filter = ('active', 'created_on')
+    search_fields = ('name', 'email', 'organization')
+    actions = ['processed_nominations']
+
+    # prepopulated_fields = {'slug': ('company')} 
+
+    def processed_nominations(self, request, queryset):
+        queryset.update(active=True)
+
 admin.site.register(User, UserAdmin)
 
 admin.site.unregister(Group) 
@@ -53,4 +65,6 @@ admin.site.register(Company)
 admin.site.register(Industry)
 
 admin.site.register(Comment, CommentAdmin)
+
+admin.site.register(Recommendations, RecommendationsAdmin)
 

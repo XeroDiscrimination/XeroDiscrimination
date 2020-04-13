@@ -110,4 +110,18 @@ class Comment(models.Model):
     def __str__(self):
         return 'Comment {} by {}'.format(self.body, self.name)
 
+
+class Recommendations(models.Model):
+    name = models.CharField(max_length=80)
+    email = models.EmailField(max_length=253, default='example@email.com')
+    organization = models.CharField(max_length=100)
+    reasons = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return 'Recommend {} by {}'.format(self.organization, self.name)
     
