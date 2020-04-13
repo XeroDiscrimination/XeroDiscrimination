@@ -7,8 +7,8 @@ from .forms import CommentForm
 
 def company_detail(request, slug):
     template_name = 'company_detail.html'
-    post = get_object_or_404(Company, slug=slug)
-    comments = post.comments.filter(active=True)
+    company = get_object_or_404(Company, slug=slug)
+    comments = company.comments.filter(active=True)
     new_comment = None 
     # Comment posted
     if request.method == 'POST':
@@ -24,7 +24,7 @@ def company_detail(request, slug):
     else:
         comment_form = CommentForm() 
  
-    return render(request, template_name, {'company': Company,
+    return render(request, template_name, {'company': company,
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
