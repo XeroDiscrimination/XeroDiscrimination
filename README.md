@@ -1,6 +1,6 @@
 ![readme-banner](Assets/readme-banner/readme-banner-new.png)
 # XeroDiscrimination
-TechLauncher Project 2019 S2 | Code: 19-S2-2-C Xero Discrimination
+TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 ---
 :link: **Quick Links**
 > * [**GitHub Repository**](https://github.com/Utkarsh-Marwaha/XeroDiscrimination)
@@ -17,12 +17,12 @@ TechLauncher Project 2019 S2 | Code: 19-S2-2-C Xero Discrimination
 >	* [Meeting Minutes & Related Outcomes](https://drive.google.com/drive/folders/169VP35T8-W4mUahAn6C6lPCQlQS187oB?usp=sharing)
 >		* [Client](https://drive.google.com/open?id=1vc3TeHVgU1Vq6-Y29HxFt1Xkx-3eZDTW) Meeting
 >		* [End User](https://drive.google.com/open?id=1rCV_ug61Qbb6UDWZ5-2Bvz3qek2n9rSn) Meeting
->		* [Audit](https://drive.google.com/open?id=1kezyvWSLgQJ2wjDgFBhbEjjY67mQWr2M) Meeting: Slides([1](https://drive.google.com/open?id=1tvMuiOZRrwKEXzSXKV5k_O5woK1OUlEq), [2](https://drive.google.com/open?id=14u1La-WundIx87Lg5z1T-w06dZDQP-2A), [3](https://drive.google.com/open?id=1qn2L24XhjbMwlSlg0rkPBNoOpHuxtk2S))
+>		* [Audit](https://drive.google.com/open?id=1kezyvWSLgQJ2wjDgFBhbEjjY67mQWr2M) Meeting: Slides (2020 S1) ([1](https://docs.google.com/presentation/d/1jjmwQwgzMD17aWH7QpZiZ2kdm8rWfUVM/edit#slide=id.p1), [2](), [3]())
 >		* [Team](https://drive.google.com/open?id=1arzk6l9_O8YybPrH0kaxIwK0ths6L3fP) / [Tutorial](https://drive.google.com/open?id=1C4UaNbOGimv8jshIyIePxW8_cET9NcnZ) Meeting
 >	* [End User Testing](https://drive.google.com/open?id=18gqvqGhVzZDWSa4ZrAtFL8qN_p34Or0f)
 >		* [Raw Dataset](https://drive.google.com/open?id=1oOTcOjIXANYLUUetfQKv-XSHVPR-XBBw)
 >		* [Mapping Results](https://drive.google.com/open?id=1B2iga5l2LiMfU-7CfuF2J6yy8ClL2tBl)
->	* [Showcase Poster](https://drive.google.com/open?id=1ltiUQCcyGbkt4VDQtEBzp-M4R6VGYLvE)
+>	* [Showcase Poster (2019 S2)](https://drive.google.com/open?id=1ltiUQCcyGbkt4VDQtEBzp-M4R6VGYLvE)
 > * **Supporting Documents**
 >	* [End User Testing Session Snapshots](https://drive.google.com/open?id=15zp7NXvwh1mF8rbWCacpLxMA0dr5QOzW)
 >	* [Client Meeting Snapshots](https://drive.google.com/drive/folders/1WJXr71ocib6bxigVTzI6vIyjT1Pv-xET?usp=sharing)
@@ -45,20 +45,22 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 ## :round_pushpin: Project Team and Stakeholders
 ### Team Structure
 * Rainbow 7:
-	* Spokesperson: **Utkarsh Marwaha** (Architect, Communicator, Developer) _@u6146791_
-	* Spokesperson: **Zhengqin (Raymond) Luo** (Front-end Developer, UI Designer, Communicator) _@u5469010_
-	* Member: **Yilu (Karmick) Liu** (Front-end Developer, UI Designer, Managerment) _@u6270742_
+	* Member: **Utkarsh Marwaha** (Architect, Communicator, Developer) _@u6146791_
+	* Member: **Zhengqin (Raymond) Luo** (Front-end Developer, UI Designer, Communicator, Lead Tester) _@u5469010_
+	* Spokesperson: **Yilu (Karmick) Liu** (Front-end Developer, UI Designer, Coordinator) _@u6270742_
 	* Member: **Yishun (Ethan) Shi** (Front-end Developer, Tester) _@u6598369_
-	* Member: **Jianzhen (Olivia) Long** (Back-end Developer, Tester) _@u5474453_
+	* Spokesperson: **Jianzhen (Olivia) Long** (Back-end Developer, Tester) _@u5474453_
 	* Member: **Chunxiang (Carson) Song** (Back-end Developer) _@u6302158_
 	* Member: **Zheng (Henry) Xiang** (Back-end Developer) _@u6469050_
-* Tutor: **Catherine Jaktman**, Email: Catherine.Jaktman@anu.edu.au
+* Tutor: **Andrea Parsons**, Email: Andrea.Parsons@anu.edu.au
 ### Stakeholders
 * Client:
-	* Xero: **Shreyas Nagarajappa**, **Han Zhang**, **Mehika Manocha**, **Amanda Li**
+	* Xero: **Amanda Li**, **Shreyas Nagarajappa**, **Han Zhang**, **Mehika Manocha**
 * End-users:
 	* LGBTIQ+ Community
 	* YWCA
+* Shadow:
+	* AssistiveTech
 
 
 ## :round_pushpin: Project Plan and Actions

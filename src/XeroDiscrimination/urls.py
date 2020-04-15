@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/',views.about,name='about'),
     path('contact/',views.contact,name='contact'),
-    path('',views.index,name='index'),
+    path('',v.recommend_detail,name='index'),
     path('rainbow_tick/',views.rainbow_tick,name='rainbow_tick'),
     path('jobs/',include('jobs.url')),
     path('profile/',views.profile, name='profile'),
@@ -36,4 +36,4 @@ urlpatterns = [
     # path('company_details', v.company_detail, name='company_detail')
     path('company_details/', include('accounts.url') ),
     path('promote_organization', v.recommend_detail, name='recommend_organization')
-]
+] 

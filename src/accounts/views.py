@@ -37,7 +37,7 @@ class companyDetailView(DetailView):
     template_name = 'company_detail.html'
 
 def recommend_detail(request):
-    template_name = 'recommend_company.html'
+    template_name = 'index.html'
     new_recommend = None
     if request.method == 'POST':
         recommendation_form = RecommendForm(data=request.POST)

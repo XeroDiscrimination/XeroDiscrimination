@@ -36,6 +36,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="{% url 'index' %}">Xero Discrimination</a>
@@ -58,9 +59,15 @@
 </nav>
 <!-- END nav -->
 
+=======
+{% block section %}
+    {% include 'nav.html' %}
+{% endblock %}
+
+>>>>>>> frontend2020S1
 <div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container">        
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
             <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
                 <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We have <span class="number" data-number="850000">0</span> great job offers you deserve!</p>
@@ -70,9 +77,15 @@
                     <div class="row">
                         <div class="col-md-12 nav-link-wrap">
                             <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+<<<<<<< HEAD
                                 <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Find a Job</a>
 
                                 <!-- a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Find a Candidate</a -->
+=======
+                                <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Find an Organisation</a>
+
+                                <!-- a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Find a Job</a -->
+>>>>>>> frontend2020S1
                             </div>
                         </div>
                         <div class="col-md-12 tab-wrap">
@@ -80,22 +93,33 @@
                             <div class="tab-content p-4" id="v-pills-tabContent">
                             
                                 <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+<<<<<<< HEAD
                                     <form action="{% url 'jobs:search_result' %}" method="get" class="search-job"></div>
+=======
+                                    <form action="{% url 'jobs:search_result' %}" method="get" class="search-org"></div>
+>>>>>>> frontend2020S1
                                         <div class="row">
                                         
                                             <div class="col-md">
                                                 <div class="form-group">
                                                     <div class="form-field">
+<<<<<<< HEAD
                                                         <!--<i class="icon-heart"></i>-->
                                                         <input type="text" name="companyname" class="form-control" placeholder="eg.Officer, Coordinator">
+=======
+                                                        <input type="text" name="companyname" class="form-control" placeholder="eg.Service, Health">
+>>>>>>> frontend2020S1
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md">
+                                            <!-- <div class="col-md">
                                                 <div class="form-group">
                                                     <div class="form-field">
                                                         <div class="select-wrap">
+<<<<<<< HEAD
                                                             <!--<i class="ion-ios-arrow-down"></i>-->
+=======
+>>>>>>> frontend2020S1
                                                             <select name="jobtype" class="form-control">
                                                                 <option value="">Category</option>
                                                                 <option value="0">Full</option>
@@ -108,11 +132,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-md">
                                                 <div class="form-group">
                                                     <div class="form-field">
+<<<<<<< HEAD
                                                         <!--<i class="icon-map-marker"></i>-->
+=======
+>>>>>>> frontend2020S1
                                                         <input type="text" name="loc" class="form-control" placeholder="Location">
                                                     </div>
                                                 </div>
@@ -231,11 +258,11 @@
     </div>
 </section>
 
-<section class="ftco-section ftco-counter">
+<!-- <section class="ftco-section ftco-counter">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Categories work wating for you (Coming soon...)</span>
+                <span class="subheading">Categories work waiting for you (Coming soon...)</span>
                 <h2 class="mb-4"><span>Current</span> Job Posts</h2>
             </div>
         </div>
@@ -318,8 +345,7 @@
             </div>
         </div>
     </div>
-</section>
-
+</section> -->
 
 <section class="ftco-section testimony-section">
     <div class="container">
@@ -405,8 +431,16 @@
                 </div>
             </div>
         </div>
+        <div class="row justify-content-center ftco-animate mt-5">
+            <button type="button" class="btn btn-primary py-2 mr-1" href="#/promote_organization" data-toggle="modal" data-target="#recommend" style="height:40px; width:200px; font-size:large;">Recommend</button>
+        </div>
     </div>
 </section>
+
+<!-- Modal -->
+{% block modal %}
+{% include 'recommend_company.html' %} 
+{% endblock %}
 
 <!-- Blog -->
 <!-- <section class="ftco-section bg-light">
@@ -506,6 +540,7 @@
 </div>
 </section> -->
 
+<<<<<<< HEAD
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
         <div class="row mb-5">
@@ -571,6 +606,11 @@
 </footer>
 
 
+=======
+{% block footer %}
+{% include 'footer.html' %}
+{% endblock %}
+>>>>>>> frontend2020S1
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

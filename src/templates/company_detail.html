@@ -2,54 +2,317 @@
 {% load staticfiles %}
 <html lang="en">
 
+<head>
+    <title>Organisation Profile - {{ company.name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/employerProfile.css' %}">
+</head>
+
 <body>
-    
-{% block content %}
-{% load crispy_forms_tags %}
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 left  top">
-          <div class="card-body">
-            <h1>{% block title %} {{ company.name }} {% endblock title %}</h1>
-          </div>
-        </div>
-        
-        <div class="col-md-8 card mb-4  mt-3 ">
-          <div class="card-body">
-            <!-- comments -->
-            <h2>{{ comments.count }} comments</h2>
-    
-            {% for comment in comments %}
-            <div class="comments" style="padding: 10px;">
-              <p class="font-weight-bold">
-                {{ comment.name }}
-                <span class=" text-muted font-weight-normal">
-                  {{ comment.created_on }}
-                </span>
-              </p>
-              {{ comment.body | linebreaks }}
+
+    {% block section %}
+    {% include 'nav.html' %}
+    {% endblock %}
+
+    <div class="hero-wrap js-fullheight" style="background-image: url(
+        {% with 'images/'|add:company.slug|add:'-bg.png' as company_bg %}
+            {% static company_bg %}
+        {% endwith %});"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start"
+                data-scrollax-parent="true">
+                <div class="col-md-8 ftco-animate text-center text-md-left mb-5"
+                    data-scrollax=" properties: { translateY: '70%' }">
+                    <!-- <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a
+                href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-3"><a
+                href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Single</span></p> -->
+                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{ company.name }}</h1>
+                </div>
             </div>
-            {% endfor %}
-          </div>
         </div>
-        <div class="col-md-8 card mb-4  mt-3 ">
-          <div class="card-body">
-            {% if new_comment %}
-            <div class="alert alert-success" role="alert">
-              Thank you for your commenet. Your comment is awaiting approval
-            </div>
-            {% else %}
-            <h3>Leave a comment</h3>
-            <form method="post" style="margin-top: 1.3em;">
-              {{ comment_form.as_p }}
-              {% csrf_token %}
-              <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
-            </form>
-            {% endif %}
-          </div>
-        </div>
-      </div>
     </div>
-{% endblock content %}
+
+    <section class="ftco-section ftco-degree-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 ftco-animate">
+                    <img src="
+                        {% with 'images/'|add:company.slug|add:'-logo.png' as company_logo %}
+                            {% static company_logo %}
+                        {% endwith %}" 
+                    class="img-fluid" />
+                </div>
+                <div class="col-md-6 ftco-animate">
+                    <h1 class="mb-3 display-3 font-weight-bold">{{ company.name }}
+                        <a href="{% url 'rainbow_tick' %}"><img class="img-fluid"
+                                src="{% static 'images/logo/rainbow-tick.png' %}"
+                                style="display: inline; margin-left: 5%" width="10%" height="10%"
+                                alt="rainbow-tick"></a>
+                    </h1>
+                    <span class="badge badge-pill badge-primary">Rainbow Tick</span>
+                    <!-- <span class="badge badge-pill badge-success">Accounting Software</span>
+                    <span class="badge badge-pill badge-info">Beautiful Business</span> -->
+                </div>
+                <div class="col-md-4 ftco-animate mb-5">
+                    <a href="{{ company.website }}" class="btn btn-primary btn-lg btn-block">View Company's Website</a>
+                    <p>For job opportunities, visit their website to find more!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <!-- <div class="rate">
+                    <div class="col-md-6 ftco-animate">
+                        <h2 class="mb-3 font-weight-bold">5.0</h2>
+                        <ul class="comment" name="Xero">
+                            <li value="1">★</li>
+                            <li value="2">★</li>
+                            <li value="3">★</li>
+                            <li value="4">★</li>
+                            <li value="5">★</li>
+                        </ul>
+                        <p>2 reviews</p>
+                    </div>
+                </div>
+            </div> -->
+                <div class="col-md-2 ftco-animate">
+                    <p>{{ comments.count }} Reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ftco-animate">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#summary">Summary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#jobs">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#reviews">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#photos">Photos</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div id="summary" class="container tab-pane active"><br>
+                            {{ company.description | linebreaks }}
+                        </div>
+                        <div id="jobs" class="container tab-pane"><br>
+                            <p>Please visit their website to find out more!</p>
+                        </div>
+                        <div id="reviews" class="container tab-pane">
+                            {% block content %}
+                            {% load crispy_forms_tags %}
+                            <h3 class="mb-5 mt-5">{{ comments.count }} Reviews</h3>
+                            <ul class="comment-list">
+                                {% for comment in comments %}
+                                <li class="comment">
+                                    <div class="vcard bio">
+                                        <img src="{% static 'images/person_1.jpg' %}" alt="Image placeholder">
+                                    </div>
+                                    <div class="comment-body">
+                                        <h3>{{ comment.name }}</h3>
+                                        <div class="meta">{{ comment.created_on }}</div>
+                                        <p>{{ comment.body | linebreaks }}
+                                        </p>
+                                        <!-- <p><a href="#" class="reply">Reply</a></p> -->
+                                    </div>
+                                </li>
+                                {% endfor %}
+
+                                <!-- <li class="comment">
+                                    <div class="vcard bio">
+                                        <img src="{% static 'images/person_1.jpg'%}" alt="Image placeholder">
+                                    </div>
+                                    <div class="comment-body">
+                                        <h3>John Doe</h3>
+                                        <div class="meta">October 03, 2018 at 2:21pm</div>
+                                        <p>Sample reviews.
+                                        </p>
+                                        <p><a href="#" class="reply">Reply</a></p>
+                                    </div>
+
+                                    <ul class="children">
+                                        <li class="comment">
+                                            <div class="vcard bio">
+                                                <img src="{% static 'images/person_1.jpg' %}"
+                                                    alt="Image placeholder">
+                                            </div>
+                                            <div class="comment-body">
+                                                <h3>John Doe</h3>
+                                                <div class="meta">October 03, 2018 at 2:21pm</div>
+                                                <p>Sample reviews.
+                                                </p>
+                                                <p><a href="#" class="reply">Reply</a></p>
+                                            </div>
+
+
+                                            <ul class="children">
+                                                <li class="comment">
+                                                    <div class="vcard bio">
+                                                        <img src="{% static 'images/person_1.jpg' %}"
+                                                            alt="Image placeholder">
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        <h3>John Doe</h3>
+                                                        <div class="meta">October 03, 2018 at 2:21pm</div>
+                                                        <p>Sample reviews.</p>
+                                                        <p><a href="#" class="reply">Reply</a></p>
+                                                    </div>
+
+                                                    <ul class="children">
+                                                        <li class="comment">
+                                                            <div class="vcard bio">
+                                                                <img src="{% static 'images/person_1.jpg' %}"
+                                                                    alt="Image placeholder">
+                                                            </div>
+                                                            <div class="comment-body">
+                                                                <h3>John Doe</h3>
+                                                                <div class="meta">October 03, 2018 at 2:21pm</div>
+                                                                <p>Sample reviews.</p>
+                                                                <p><a href="#" class="reply">Reply</a></p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                            
+
+                            <div class="comment-form-wrap pt-5">
+                                <h3 class="mb-5">Leave a review</h3>
+                                <div class="card-body">
+                                  {% if new_comment %}
+                                  <div class="alert alert-success" role="alert">
+                                    Thank you for your comment. Your comment is awaiting approval
+                                  </div>
+                                  {% else %}
+                                  <form method="post" style="margin-top: 1.3em;">
+                                    {{ comment_form.as_p }}
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+                                  </form>
+                                  {% endif %}
+                                </div>
+                              </div>
+                        </div>
+                        {% endblock content %}
+
+                        <div id="photos" class="container tab-pane"><br>
+                            <p>Waiting for organisation to upload</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 sidebar ftco-animate">
+
+                    <div class="sidebar-box ftco-animate">
+                        <div class="categories">
+                            <h3>Contact Details</h3>
+                            <li>Phone Number:</li>
+                            <li>Email Address: {{ company.user }}</li>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-box ftco-animate">
+                        <h3>Location</h3>
+                        <p>{{ company.address }}</p>
+                        <iframe width="100%" height="300" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJizgvKd5NFmsR-MfLZzFNhMw&key=AIzaSyALszxJEUE3ywsEQ_kNeoqQ9rTGMkvM4S4"
+                            allowfullscreen></iframe>
+
+                    </div>
+
+                    <div class="sidebar-box ftco-animate">
+                        <h3>Tag Cloud</h3>
+                        <div class="tagcloud">
+                            <a href="#" class="tag-cloud-link">Information & Communication Technology</a>
+                            <a href="#" class="tag-cloud-link">Accounting</a>
+                            <a href="#" class="tag-cloud-link">Education & Training</a>
+                            <a href="#" class="tag-cloud-link">Engineering</a>
+                            <a href="#" class="tag-cloud-link">Healthcare & Medical</a>
+                            <a href="#" class="tag-cloud-link">Human Resources & Recruitment </a>
+                            <a href="#" class="tag-cloud-link">Marketing & Communications </a>
+                            <a href="#" class="tag-cloud-link">Sales</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+    {% include 'footer.html' %}
+    {% endblock %}
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" /></svg></div>
+
+
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'js/aos.js'%}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap-datepicker.js'%}"></script>
+    <!-- script src="js/jquery.timepicker.min.js"></script -->
+    <script src="{% static 'js/scrollax.min.js'%}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
+    </script>
+    <script src="{% static 'js/google-map.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
 
 </body>
+
+</html>

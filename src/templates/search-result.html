@@ -35,6 +35,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="{% url 'index' %}">Xero Discrimination</a>
@@ -56,78 +57,92 @@
     </div>
 </nav>
 <!-- END nav -->
+=======
+{% block section %}
+    {% include 'nav.html' %}
+{% endblock %}
+>>>>>>> frontend2020S1
 
 <section class="ftco-section img" style="background-image: url({% static 'images/bg_3.jpg' %});" data-stellar-background-ratio="0.5">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Jobs we found for you</span>
-                <h2 class="mb-4"><span>Job</span> Result</h2>
+                <span class="subheading">Organiasations we found for you</span>
+                <h2 class="mb-4"><span>Search</span> Result</h2>
             </div>
         </div>
 		
-        <!-- This should be done by the backend instead -->
 		<div id="searchresultsdiv">
-		</div>
-        <script>
-		function getAllUrlParams(url) {
+    </div>
 
-  // get query string from url (optional) or window
-  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+      {{jobs|json_script:"jobs"}}
 
-  // we'll store the parameters here
-  var obj = {};
+      <script type="text/javascript">
+    		function getAllUrlParams(url) {
 
-  // if query string exists
-  if (queryString) {
+          // get query string from url (optional) or window
+          var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
 
-    // stuff after # is not part of query string, so get rid of it
-    queryString = queryString.split('#')[0];
+          // we'll store the parameters here
+          var obj = {};
 
-    // split our query string into its component parts
-    var arr = queryString.split('&');
+          // if query string exists
+          if (queryString) {
 
-    for (var i = 0; i < arr.length; i++) {
-      // separate the keys and the values
-      var a = arr[i].split('=');
+            // stuff after # is not part of query string, so get rid of it
+            queryString = queryString.split('#')[0];
 
-      // set parameter name and value (use 'true' if empty)
-      var paramName = a[0];
-      var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+            // split our query string into its component parts
+            var arr = queryString.split('&');
 
-      // (optional) keep case consistent
-      paramName = paramName.toLowerCase();
-      if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+            for (var i = 0; i < arr.length; i++) {
+              // separate the keys and the values
+              var separated = arr[i].split('=');
 
-      // if the paramName ends with square brackets, e.g. colors[] or colors[2]
-      if (paramName.match(/\[(\d+)?\]$/)) {
+              // set parameter name and value (use 'true' if empty)
+              var paramName = separated[0];
+              var paramValue = typeof (separated[1]) === 'undefined' ? true : separated[1];
 
-        // create key if it doesn't exist
-        var key = paramName.replace(/\[(\d+)?\]/, '');
-        if (!obj[key]) obj[key] = [];
+              // (optional) keep case consistent
+              paramName = paramName.toLowerCase();
+              if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
 
-        // if it's an indexed array e.g. colors[2]
-        if (paramName.match(/\[\d+\]$/)) {
-          // get the index value and add the entry at the appropriate position
-          var index = /\[(\d+)\]/.exec(paramName)[1];
-          obj[key][index] = paramValue;
-        } else {
-          // otherwise add the value to the end of the array
-          obj[key].push(paramValue);
+              // if the paramName ends with square brackets, e.g. colors[] or colors[2]
+              if (paramName.match(/\[(\d+)?\]$/)) {
+
+                // create key if it doesn't exist
+                var key = paramName.replace(/\[(\d+)?\]/, '');
+                if (!obj[key]) obj[key] = [];
+
+                // if it's an indexed array e.g. colors[2]
+                if (paramName.match(/\[\d+\]$/)) {
+                  // get the index value and add the entry at the appropriate position
+                  var index = /\[(\d+)\]/.exec(paramName)[1];
+                  obj[key][index] = paramValue;
+                } else {
+                  // otherwise add the value to the end of the array
+                  obj[key].push(paramValue);
+                }
+              } else {
+                // we're dealing with a string
+                if (!obj[paramName]) {
+                  // if it doesn't exist, create property
+                  obj[paramName] = paramValue;
+                } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+                  // if property does exist and it's a string, convert it to an array
+                  obj[paramName] = [obj[paramName]];
+                  obj[paramName].push(paramValue);
+                } else {
+                  // otherwise add the property
+                  obj[paramName].push(paramValue);
+                }
+              }
+            }
+          }
+
+          return obj;
         }
-      } else {
-        // we're dealing with a string
-        if (!obj[paramName]) {
-          // if it doesn't exist, create property
-          obj[paramName] = paramValue;
-        } else if (obj[paramName] && typeof obj[paramName] === 'string'){
-          // if property does exist and it's a string, convert it to an array
-          obj[paramName] = [obj[paramName]];
-          obj[paramName].push(paramValue);
-        } else {
-          // otherwise add the property
-          obj[paramName].push(paramValue);
-        }
+<<<<<<< HEAD
       }
     }
   }
@@ -535,16 +550,62 @@
 			love = (rainbowtick) ? heart1 : heart2;
 
             return '<div class="row"> <div class="col-md-12 ftco-animate"><div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center"><div class="mb-4 mb-md-0 mr-5"> <div class="job-post-item-header d-flex align-items-center"> <h2 class="mr-3 text-black h3"> <a href="' + jobwebsite +'" style="color:#222222;">' + jobtitle + ' </a></h2> <div class="badge-wrap"> <span class="bg-primary text-white badge py-2 px-3">' + jobtype + '</span> </div> </div> <div class="job-post-item-body d-block d-md-flex"> <div class="mr-3"><span class="icon-layers"></span> <a href="' + companywebsite + '">' + companyname + '</a></div> <div><span class="icon-my_location"></span> <span>' + loc + '</span></div> </div> </div><div class="ml-auto d-flex"> ' + love + ' </a> <!-- Button trigger modal --><button type="button" class="btn btn-primary py-2 mr-1" data-toggle="modal" data-target="#exampleModal">Apply for Job</button> </div> </div> </div>';
-        }
-
+=======
 		
-        for (var i = 0; i < data.length; i++) {
-			var job = data[i];
-			sr = document.getElementById("searchresultsdiv");
-			sr.innerHTML += resultBlock(job.jobtitle, jobtypestring(job.jobtype), job.companyname, job.loc, job.companywebsite, job.rainbowtick, job.jobwebsite);
-        }
+		// jobtypes = ["Full", "Part", "Full/Part", "Permanent", "Temporary", "Casual"];
+		// function jobtypestring(jobtype) {
+		// 	console.log("jt: " + jobtype)
+		// 	return jobtypes[parseInt(jobtype)];
+		// }
+		// function jobtypecolour(jobtype) {
+		// 	return hsl(jobtype/jobtypes.size(),100,80);
+		// }
+		
+        params = getAllUrlParams();
+        searchcompanyname = params.companyname;
+        searchloc = params.loc;
 
-        </script>
+        jobsData = {% autoescape off %}
+        {{jobs}}
+        {% endautoescape %};
+
+        companiesData = {% autoescape off %}
+        {{companies}}
+        {% endautoescape %};
+        // data = JSON.parse(data);
+        // var data = document.getElementById('jobs').textContent;
+
+        if (searchcompanyname) {
+          companiesData = companiesData.filter(d => d.fields.name.toLowerCase().includes(searchcompanyname.toLowerCase()));
+>>>>>>> frontend2020S1
+        }
+        // console.log(data)
+        if (searchloc) {
+          companiesData = companiesData.filter(d => d.fields.state.toLowerCase().includes(searchloc.toLowerCase()) || d.fields.country.toLowerCase().includes(searchloc.toLowerCase()));
+        }
+        // console.log(data)
+        // console.log(searchjobtype + " " + jobtypestring(searchjobtype));
+        // if (searchjobtype) {
+        // 	data =  data.filter(d => d.jobtype == searchjobtype); //Need to fix this! Jobtypes are inconsistent.
+        // }
+        // console.log(data)
+        
+        function resultBlock(name, website, state, rainbowtick) {
+          heart1 = '<a href="{% url 'rainbow_tick' %}"> <img src="{% static 'images/logo/rainbow-tick.png' %}" class="img-fluid pr-2" width="50" height="50" alt="rainbow-tick"></a>';
+          heart2 = '<a href="#" class="img">';
+          love = (rainbowtick) ? heart1 : heart2;
+
+                return '<div class="row"> <div class="col-md-12 ftco-animate"><div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center"><div class="mb-4 mb-md-0 mr-5"> <div class="job-post-item-header d-flex align-items-center"> <h2 class="mr-3 text-black h3"> <a href="/company_details/'+ website +'" style="color:#222222;">' + name + ' </a></h2> <div class="badge-wrap"> </div> </div> <div><span class="icon-my_location"></span> <span>' + state + '</span></div> </div> <div class="ml-auto d-flex"> ' + love + ' <!-- Button trigger modal --><button type="button" class="btn btn-primary py-2 mr-1" data-toggle="modal" data-target="#contactOrg">Contact Organisation</button> </div> </div> </div>';
+            }
+
+        
+          for (var i = 0; i < companiesData.length; i++) {
+            var org = companiesData[i];
+            sr = document.getElementById("searchresultsdiv");
+            sr.innerHTML += resultBlock(org.fields.name, org.fields.slug, org.fields.state, true);
+          }
+
+      </script>
 
         <!--  ----------------------------------------- -->
 
@@ -570,7 +631,7 @@
 </section>
 
 <!-- Modal -->
-<div class="modal fade ftco-animate" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade ftco-animate" id="contactOrg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -612,6 +673,7 @@
 
 <!-- Search Result End -->
 
+<<<<<<< HEAD
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
         <div class="row mb-5">
@@ -677,6 +739,11 @@
 </footer>
 
 
+=======
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}
+>>>>>>> frontend2020S1
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen">
