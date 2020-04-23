@@ -7,6 +7,7 @@ TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 > 	* [Issue Board (ZenHub Board)](https://github.com/Utkarsh-Marwaha/XeroDiscrimination#workspaces/rainbow7-5d521985c4594626b3600b43/board?repos=202042365)
 >	* [Minimum Viable Product (MVP)](https://github.com/Utkarsh-Marwaha/XeroDiscrimination#workspaces/rainbow7-5d521985c4594626b3600b43/board?repos=202042365): Under the MVP pipeline.
 >	* [Acceptance criteria](https://github.com/Utkarsh-Marwaha/XeroDiscrimination#workspaces/rainbow7-5d521985c4594626b3600b43/board?repos=202042365): Xeros have assessed those MVPs and responded to them. See them by click on the cards.
+> * [**User Story Map**](https://miro.com/app/board/o9J_ktx1beQ=/)
 > * [**Google Drive**](https://drive.google.com/drive/folders/16or-qAWaP47zYRBujUtLxquibFVMffwd)
 >  	* [Project Plan](https://drive.google.com/open?id=1SB9oyRcp21_rfohmSQQdtWHxJnV5V1Ay)
 >	* [Statement of Work (SoW)](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)
@@ -39,7 +40,8 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 
 ### Minimal Viable Product - Iteration 1
 * **[Statement of Work](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)**
-* **[User Story Map](https://drive.google.com/open?id=1PS4gMNf0QJ2Y59hs9PiB_H7XSiubzW37)**
+* **[User Story Map (Semester 1)](https://drive.google.com/open?id=1PS4gMNf0QJ2Y59hs9PiB_H7XSiubzW37)**
+* **[User Story Map (Semester 2)](https://miro.com/app/board/o9J_ktx1beQ=/)**
 
 
 ## :round_pushpin: Project Team and Stakeholders
