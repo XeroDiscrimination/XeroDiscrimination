@@ -25,9 +25,6 @@ def rainbow_tick(request):
 
 def search_result(request):
 
-<<<<<<< HEAD
-    return render(request,'search-result.html')
-=======
     jobs = serializers.serialize('json', Job.objects.all())
     companies = serializers.serialize('json', Company.objects.all())
 
@@ -38,7 +35,6 @@ def search_result(request):
 def blog(request):
 
     return render(request,'blog.html')
->>>>>>> frontend2020S1
 
 def new_post(request):
 
