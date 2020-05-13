@@ -1,0 +1,37 @@
+{% extends 'admin/base.html' %}
+{% load static from staticfiles %}
+<!-- this page is to add extra elements to the admin page  -->
+{% block header %}
+
+{% endblock %}
+{% block branding %}
+<h1>
+    <img src="../../../static/images/YWCA.png" height="50px">
+    YWCA Admin Portal
+    <style>
+        #header {
+            background: linear-gradient(to right,rgba(255, 0, 0, 0.7),rgba(255, 166, 0, 0.7),
+            rgba(255, 255, 0, 0.7),rgba(0, 128, 0, 0.7),rgba(0, 0, 255, 0.7),rgba(76, 0, 130, 0.7),
+            rgba(238, 130, 238, 0.7));
+        }
+        #branding h1{
+            font-size: 30px;
+            font-weight: bold;
+            box-shadow: 50px;
+            color: rgba(240, 240, 233);
+            text-shadow: -1px 1px 0 #000, 
+                          1px 1px 0 #000, 
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000; 
+        }
+        #branding img{
+            margin-top: -8px;
+        }
+    </style>
+</h1>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block content_title %}{% if title %}{% endif %}{% endblock %}

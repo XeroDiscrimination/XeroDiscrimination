@@ -68,3 +68,4 @@ admin.site.register(Comment, CommentAdmin)
 
 admin.site.register(Recommendations, RecommendationsAdmin)
 
+# admin.site.site_header = 'Xero Discrimination Administration'

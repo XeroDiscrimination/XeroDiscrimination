@@ -33,11 +33,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #django packages
+    'django.contrib.admin',
     'accounts',
     'jobs',
     'ckeditor',
     'crispy_forms',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

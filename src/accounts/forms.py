@@ -62,3 +62,8 @@ class RecommendForm(forms.ModelForm):
     class Meta:
         model = Recommendations
         fields = ('name', 'email', 'organization', 'reasons')
+
+class CompanyForm(forms.ModelForm):
+    class Meta:
+        model = Company
+        fields = ('user', 'name', 'description', 'website','country', 'state', 'address', 'slug')

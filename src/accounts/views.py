@@ -2,7 +2,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import Company, Comment, Recommendations
-from .forms import CommentForm, RecommendForm
+from .forms import CommentForm, RecommendForm, CompanyForm
 
 def company_detail(request, slug):
     template_name = 'company_detail.html'
@@ -47,3 +47,29 @@ def recommend_detail(request):
         recommendation_form = RecommendForm()
     return render(request, template_name, {'new_recommendation': new_recommend,
                                            'recommendation_form': recommendation_form})
+
+class ywca_admin(ListView):
+    template_name = 'ywca_admin.html'
+    context_object_name = 'company_list' 
+    queryset = Company.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super(ywca_admin, self).get_context_data(**kwargs)
+        context['comments_list'] = Comment.objects.all()
+        context['recommend_list'] = Recommendations.objects.all()
+        return context 
+
+def company_update(request, slug):
+    instance = get_object_or_404(Company, slug=slug)
+    form = CompanyForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+    context = {
+        "name": instance.name,
+        "description": instance.description,
+        "website": instance.website,
+        "country": instance.country,
+        "state": instance.state,
+    }
+    return render(request, "", context) 
