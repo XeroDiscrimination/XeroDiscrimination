@@ -22,7 +22,7 @@ class UserAdmin(BaseUserAdmin):
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
     # overrides get_fieldsets to use this attribute when creating a user.
-    add_fieldsets = (
+    add_fieldsets = ( 
         (None, {
             'classes': ('wide',),
             'fields': ('email', 'password1', 'password2')}
@@ -35,7 +35,7 @@ class UserAdmin(BaseUserAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'company', 'created_on', 'active')
     list_filter = ('active', 'created_on')
-    search_fields = ('name', 'email', 'body')
+    search_fields = ('name', 'email', 'body') 
     actions = ['approve_comments']
 
     # prepopulated_fields = {'slug': ('company')} 
@@ -59,10 +59,10 @@ admin.site.register(User, UserAdmin)
 
 admin.site.unregister(Group) 
 
-admin.site.register(Applicant)
-admin.site.register(Company)
+# admin.site.unregister(Applicant)
+# admin.site.register(Industry)
 
-admin.site.register(Industry)
+admin.site.register(Company)
 
 admin.site.register(Comment, CommentAdmin)
 

@@ -49,7 +49,7 @@ def recommend_detail(request):
                                            'recommendation_form': recommendation_form})
 
 class ywca_admin(ListView):
-    template_name = 'ywca_admin.html'
+    template_name = 'ywca_admin.html' 
     context_object_name = 'company_list' 
     queryset = Company.objects.all()
 
@@ -57,7 +57,7 @@ class ywca_admin(ListView):
         context = super(ywca_admin, self).get_context_data(**kwargs)
         context['comments_list'] = Comment.objects.all()
         context['recommend_list'] = Recommendations.objects.all()
-        return context 
+        return context
 
 def company_update(request, slug):
     instance = get_object_or_404(Company, slug=slug)

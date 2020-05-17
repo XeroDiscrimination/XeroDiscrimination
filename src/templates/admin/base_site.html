@@ -35,3 +35,16 @@
 {% endblock %}
 
 {% block content_title %}{% if title %}{% endif %}{% endblock %}
+
+{% block content %}
+    {% block object-tools %}
+    <h1>this is here</h1>
+    {% endblock %}
+    {{ content }}
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+    
+</style>
+{% endblock %}
