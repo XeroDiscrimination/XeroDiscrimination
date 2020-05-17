@@ -12,6 +12,9 @@
               <div class="alert alert-success" role="alert">
                 Your noimation has been submitted. Thank you for your recommendation!
               </div>
+              <script>
+                alert ( '{{messages}}' )
+              </script>
               {% else %}
               <h3>Propose a LGBTQI+ Friendly Company</h3>
               <form method="post" style="margin-top: 1.3em;">
@@ -21,6 +24,11 @@
                 <button type="submit" class="btn btn-primary" style="height:40px; width:200px; font-size:large;">Submit</button>
               </form>
               {% endif %}
+              <!-- {% if new_recommendation %}
+                <script>
+                  alert ( '{{messages}}' )
+                </script>
+              {% endif %} -->
             </div>
         </div>
     </div>
