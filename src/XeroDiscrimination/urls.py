@@ -19,6 +19,7 @@ from django.urls import path
 from django.conf.urls import include
 from jobs import views
 from accounts import views as v
+from login import views as lv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,4 +39,10 @@ urlpatterns = [
     # path('company_details', v.company_detail, name='company_detail')
     path('company_details/', include('accounts.url') ),
     path('promote_organization', v.recommend_detail, name='recommend_organization'),
+
+    path('index/', lv.index),
+    path('login/', lv.login),
+    path('register/', lv.register),
+    path('logout/', lv.logout),
+    path('captcha/', include('captcha.urls')) 
 ] 
