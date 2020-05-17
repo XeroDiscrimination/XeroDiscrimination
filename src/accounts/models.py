@@ -6,6 +6,7 @@ from django.urls import reverse
 from .managers import UserManager
 
 
+
 class User(AbstractBaseUser, PermissionsMixin):
     full_name       = models.CharField(_('full name'), max_length=30)
     email           = models.EmailField(_('email address'), unique=True)
@@ -60,6 +61,7 @@ GENDERS = (
     ('female', 'Female')
 )
 
+# not used in this semester
 class Applicant(models.Model):
     user            = models.OneToOneField(User, on_delete=models.CASCADE)
     interest        = models.ForeignKey(Industry, on_delete=models.SET_NULL, blank=True, null=True)
@@ -78,11 +80,11 @@ class Company(models.Model):
     user        = models.OneToOneField(User, on_delete=models.CASCADE)
     name        = models.CharField(_('company name'), max_length=50, null=True, blank=True)
     description = models.TextField(_('describe your company'), null=True, blank=True)
-    website     = models.URLField(_('company webite'), null=True, blank=True)
+    website     = models.URLField(_('company website'), null=True, blank=True)
     country     = models.CharField(max_length=40, null=True, blank=True)
     state       = models.CharField(max_length=40, null=True, blank=True)
     address     = models.CharField(_('company address'), max_length=120, null=True, blank=True)
-    slug = models.SlugField(null=False,unique=True)
+    slug        = models.SlugField(null=False,unique=True)
 
     class Meta: 
         verbose_name_plural = 'Companies'
