@@ -1,5 +1,6 @@
 .DS_Store
 *.pyc
+<<<<<<< HEAD
 settings.json
 *ignore*/
 <<<<<<< HEAD
@@ -14,3 +15,10 @@ __pycache__/
 __pycache__/
 */__pycache__
 >>>>>>> bf0b37e91a8779900fd370878847ce67e831f74f
+=======
+req.txt
+settings.json
+.pyc
+*/__pycache__
+__pycache__/
+>>>>>>> f1117eaa19a1fe3b42f57316a1203b8afaea0ab9
