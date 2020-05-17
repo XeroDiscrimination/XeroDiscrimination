@@ -44,4 +44,5 @@ urlpatterns = [
     path('login/', lv.login),
     path('register/', lv.register),
     path('logout/', lv.logout),
+    path('captcha/', include('captcha.urls')) 
 ] 
