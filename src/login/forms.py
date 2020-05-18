@@ -7,14 +7,17 @@ class UserForm(forms.Form):
     captcha = CaptchaField(label='Captcha')
 
 class RegisterForm(forms.Form):
-    gender = (
-        ('male', "male"),
-        ('female', "female"),
-        ('others', "others"),
+    pronouns = (
+        ('they', "they"),
+        ('he', "he"),
+        ('she', "she"),
+        ('zie', "zie"),
+        ('hir', "hir/hirs"),
+        ('na', "N/A"),
     )
     username = forms.CharField(label="Username", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
     password1 = forms.CharField(label="Password", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label="Confirm password", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     email = forms.EmailField(label="Email address", widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    sex = forms.ChoiceField(label='Gender', choices=gender)
+    pronoun = forms.ChoiceField(label='Pronoun', choices=pronouns)
     captcha = CaptchaField(label='Captcha')
