@@ -28,10 +28,10 @@
             </div>
         {% else %}
             <div class="nav-link">
-                <a href="login">
+                <a href="{% url 'login' %}">
                     <button type="button" class="btn btn-primary py-2 mr-1" style="font-size:large;">Log in</button>
                 </a>
-                <a href="register">
+                <a href="{% url 'register' %}">
                     <button type="button" class="btn btn-outline-primary py-2 mr-1" style="font-size:large;">Sign Up</button>
                 </a>              
             </div>
