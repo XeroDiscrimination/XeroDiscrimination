@@ -24,6 +24,7 @@ TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 >		* [Raw Dataset](https://drive.google.com/open?id=1oOTcOjIXANYLUUetfQKv-XSHVPR-XBBw)
 >		* [Mapping Results](https://drive.google.com/open?id=1B2iga5l2LiMfU-7CfuF2J6yy8ClL2tBl)
 >	* [Showcase Poster (2019 S2)](https://drive.google.com/open?id=1ltiUQCcyGbkt4VDQtEBzp-M4R6VGYLvE)
+>	* [Showcase Poster (2020 S1)](https://drive.google.com/file/d/1GGG16kWNh-AtCTrQzY3W8r8fJrOEjsFv/view?usp=sharing)
 > * **Supporting Documents**
 >	* [End User Testing Session Snapshots](https://drive.google.com/open?id=15zp7NXvwh1mF8rbWCacpLxMA0dr5QOzW)
 >	* [Client Meeting Snapshots](https://drive.google.com/drive/folders/1WJXr71ocib6bxigVTzI6vIyjT1Pv-xET?usp=sharing)
@@ -42,6 +43,7 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 * **[Statement of Work](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)**
 * **[User Story Map (Semester 1)](https://drive.google.com/open?id=1PS4gMNf0QJ2Y59hs9PiB_H7XSiubzW37)**
 * **[User Story Map (Semester 2)](https://miro.com/app/board/o9J_ktx1beQ=/)**
+P.S. Click to reveal the full USM
 [![usm-snapshot](Assets/USM_Snapshot.png)](https://miro.com/app/board/o9J_ktx1beQ=/)
 
 
