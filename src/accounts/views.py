@@ -2,7 +2,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import Company, Comment, Recommendations
-from .forms import CommentForm, RecommendForm
+from .forms import CommentForm, RecommendForm, CompanyForm
+from django.contrib import messages
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 def company_detail(request, slug):
     template_name = 'company_detail.html'
@@ -20,13 +23,16 @@ def company_detail(request, slug):
         new_comment.company = company
             # Save the comment to the database
         new_comment.save()
+        message = "Submitted Successufully!"
     else:
-        comment_form = CommentForm()  
+        comment_form = CommentForm() 
+        message = None
  
     return render(request, template_name, {'company': company,
                                            'comments': comments,
                                            'new_comment': new_comment,
-                                           'comment_form': comment_form})
+                                           'comment_form': comment_form,
+                                           'messages': message})
 
 class companyListView(ListView):
     model = Company
@@ -42,8 +48,37 @@ def recommend_detail(request):
     if request.method == 'POST':
         recommendation_form = RecommendForm(data=request.POST)
         new_recommend = recommendation_form.save(commit=False)
-        new_recommend.save()
+        new_recommend.save()  
+        message = 'Submitted Successfully!'
     else:
         recommendation_form = RecommendForm()
+        message = None
     return render(request, template_name, {'new_recommendation': new_recommend,
-                                           'recommendation_form': recommendation_form})
+                                           'recommendation_form': recommendation_form,
+                                           'messages': message})
+
+class ywca_admin(ListView):
+    template_name = 'ywca_admin.html' 
+    context_object_name = 'company_list' 
+    queryset = Company.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super(ywca_admin, self).get_context_data(**kwargs)
+        context['comments_list'] = Comment.objects.all()
+        context['recommend_list'] = Recommendations.objects.all()
+        return context
+
+def company_update(request, slug):
+    instance = get_object_or_404(Company, slug=slug)
+    form = CompanyForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+    context = {
+        "name": instance.name,
+        "description": instance.description,
+        "website": instance.website,
+        "country": instance.country,
+        "state": instance.state,
+    }
+    return render(request, "", context) 

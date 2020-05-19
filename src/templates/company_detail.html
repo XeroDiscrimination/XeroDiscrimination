@@ -226,6 +226,9 @@
                                   <div class="alert alert-success" role="alert">
                                     Thank you for your comment. Your comment is awaiting approval
                                   </div>
+                                  <script>
+                                    alert ( '{{messages}}' )
+                                  </script>
                                   {% else %}
                                   <form method="post" style="margin-top: 1.3em;">
                                     {{ comment_form.as_p }}

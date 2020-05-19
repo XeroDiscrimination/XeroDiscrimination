@@ -1,0 +1,69 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'login/css/register.css' %}" rel="stylesheet"/>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="card form-register">
+        <div class="card-body">
+            <form class="" action="/register/" method="post">
+
+                {% if register_form.captcha.errors %}
+                    <div class="alert alert-warning">{{ register_form.captcha.errors }}</div>
+                {% elif message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                {% endif %}
+
+                {% csrf_token %}
+                <h3 class="text-center">Sign Up</h3>
+
+                <div class="form-group">
+                    {{ register_form.username.label_tag }}
+                    {{ register_form.username}}
+                </div>
+                <div class="form-group">
+                    {{ register_form.password1.label_tag }}
+                    {{ register_form.password1 }}
+                </div>
+                <div class="form-group">
+                    {{ register_form.password2.label_tag }}
+                    {{ register_form.password2 }}
+                </div>
+                <div class="form-group">
+                    {{ register_form.email.label_tag }}
+                    {{ register_form.email }}
+                </div>
+                <div class="form-group">
+                    {{ register_form.pronoun.label_tag }}
+                    {{ register_form.pronoun }}
+                </div>
+                <div class="form-group">
+                    {{ register_form.captcha.label_tag }}
+                    {{ register_form.captcha }}
+                </div>
+
+                <div>
+                    <a href="/login/" class="text-success">Back to Sign in</a>
+                    <button type="submit" class="btn btn-primary float-right">Register</button>
+                </div>
+            </form>
+        </div>
+        <img class="card-img-bottom" src="../static/login/image/about.jpg">
+    </div> <!-- /container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {#    reference#}
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
