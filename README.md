@@ -46,8 +46,10 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 
 ### Minimal Viable Product - Iteration 1
 * **[Statement of Work](https://drive.google.com/open?id=1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)**
-* **[User Story Map (Semester 1)](https://drive.google.com/open?id=1PS4gMNf0QJ2Y59hs9PiB_H7XSiubzW37)**
-* **[User Story Map (Semester 2)](https://miro.com/app/board/o9J_ktx1beQ=/)**: Click to reveal the full USM
+* **[Feature Mind Map (2020 S1)](https://drive.google.com/file/d/13mptTU_BVMKIFpw-GJgYrQAsPAmmu2UL/view?usp=sharing)**: Click to reveal the full map
+![feature-mind-map](Assets/Feature_Mind_Map.png)
+* **[User Story Map (2019 S2)](https://drive.google.com/open?id=1PS4gMNf0QJ2Y59hs9PiB_H7XSiubzW37)**
+* **[User Story Map (2020 S1)](https://miro.com/app/board/o9J_ktx1beQ=/)**: Click to reveal the full USM
 [![usm-snapshot](Assets/USM_Snapshot.png)](https://miro.com/app/board/o9J_ktx1beQ=/)
 
 
@@ -62,7 +64,7 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 	* Member: **Chunxiang (Carson) Song** (Back-end Developer) _@u6302158_
 	* Member: **Zheng (Henry) Xiang** (Back-end Developer) _@u6469050_
 * Tutor: **Andrea Parsons**, Email: Andrea.Parsons@anu.edu.au
-* [Team with remote members approval agreement](https://drive.google.com/file/d/1sSnSL86ubvxETi3SM4OCQuOqCNMHB_PW/view?usp=sharing)
+* [Working with Remote Members Approval and Agreement](https://drive.google.com/file/d/1sSnSL86ubvxETi3SM4OCQuOqCNMHB_PW/view?usp=sharing)
 ### Stakeholders
 * Client:
 	* Xero: **Amanda Li**, **Shreyas Nagarajappa**, **Han Zhang**, **Mehika Manocha**
