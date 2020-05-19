@@ -31,12 +31,13 @@ class AutomatedTest(unittest.TestCase):
         self.driver.get("http://127.0.0.1:8000/")
         # self.driver.implicitly_wait(30)
         self.driver.maximize_window()
-        wait(2)
+        wait(1)
 
     def test_navBar(self):
-        # Arrange
+        #Arrange
         driver = self.driver
-        # Act: click links in NavBar should go to corresponding page
+
+        #Act: click links in NavBar should go to corresponding page
         driver.find_element_by_xpath('//a[contains(text(), "Zero Discrimination")]').click()
         url1 = driver.current_url
         driver.find_element_by_xpath('//a[contains(text(), "Home")]').click()
@@ -47,12 +48,22 @@ class AutomatedTest(unittest.TestCase):
         url4 = driver.current_url
         driver.find_element_by_xpath('//a[contains(text(), "Contact")]').click()
         url5 = driver.current_url
-        # Assert
+
+        #Assert
         self.assertEqual("http://127.0.0.1:8000/", url1, "Click navBar ZeroDiscrimination should go to index page")
         self.assertEqual("http://127.0.0.1:8000/", url2, "Click navBar Home should go to index page")
         self.assertEqual("http://127.0.0.1:8000/about/", url3, "Click navBar About Us should go to about page")
         self.assertEqual("http://127.0.0.1:8000/rainbow_tick/", url4, "Click navBar About Us should go to rainbow_tick page")
         self.assertEqual("http://127.0.0.1:8000/contact/", url5, "Click navBar About Us should go to contact page")
+
+    def test_job_search(self):
+        #Arrange
+        driver = self.driver
+        
+        #Act
+        driver.find_element_by_xpath("//input[@type='submit' and @value='Search']").click()
+        wait(5)
+
 
     def tearDown(self):
         self.driver.close()
