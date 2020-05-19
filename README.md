@@ -6,10 +6,11 @@ TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 > * [**GitHub Repository**](https://github.com/XeroDiscrimination/XeroDiscrimination)
 > 	* [Issue Board](https://github.com/XeroDiscrimination/XeroDiscrimination/issues)
 >	* [Minimum Viable Product (MVP)](https://github.com/XeroDiscrimination/XeroDiscrimination/labels/MVP) with [Acceptance criteria](https://github.com/XeroDiscrimination/XeroDiscrimination/labels/MVP): Under the MVP pipeline, Xeros have assessed those MVPs and responded to them. See them by click on the cards.
+> * [**Feature Mind Map**](https://drive.google.com/file/d/13mptTU_BVMKIFpw-GJgYrQAsPAmmu2UL/view?usp=sharing)
 > * [**User Story Map**](https://miro.com/app/board/o9J_ktx1beQ=/)
 > * [**Google Drive**](https://drive.google.com/drive/folders/16or-qAWaP47zYRBujUtLxquibFVMffwd)
 >  	* [Project Plan](https://drive.google.com/open?id=1SB9oyRcp21_rfohmSQQdtWHxJnV5V1Ay)
->	* [Statement of Work (SoW) 2020 S1](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)
+>	* [Statement of Work (SoW) 2020 S1](https://docs.google.com/document/d/1YBZL4IUF8j6Wo8m1v1iqP18Us73I_kAL-XkAC27-nug/edit?usp=sharing)
 >	* [Risk Register](https://drive.google.com/drive/u/0/folders/1PMRCn4jS3Ur-zPC1xj_NW_ijhUyR6ev7)
 >	* [Descision Log](https://drive.google.com/drive/u/0/folders/18XHohg63HihipddTGb2wYRgnH8vlGodf)
 >		* [Descision Making Process Flow Chart](https://drive.google.com/drive/u/0/folders/18XHohg63HihipddTGb2wYRgnH8vlGodf)
@@ -17,7 +18,10 @@ TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 >	* [Meeting Minutes & Related Outcomes](https://drive.google.com/drive/folders/169VP35T8-W4mUahAn6C6lPCQlQS187oB?usp=sharing)
 >		* [Client](https://drive.google.com/open?id=1vc3TeHVgU1Vq6-Y29HxFt1Xkx-3eZDTW) Meeting
 >		* [End User](https://drive.google.com/open?id=1rCV_ug61Qbb6UDWZ5-2Bvz3qek2n9rSn) Meeting
->		* [Audit](https://drive.google.com/open?id=1kezyvWSLgQJ2wjDgFBhbEjjY67mQWr2M) Meeting: Slides (2020 S1) ([1](https://docs.google.com/presentation/d/1jjmwQwgzMD17aWH7QpZiZ2kdm8rWfUVM/edit#slide=id.p1), [2](https://drive.google.com/drive/folders/1u7HFsIVtTumHGokaRkCmogwTLlCEribN), [3]())
+>		* [Audit](https://drive.google.com/open?id=1kezyvWSLgQJ2wjDgFBhbEjjY67mQWr2M) Meeting: Slides (2020 S1)
+([1](https://drive.google.com/file/d/1jjmwQwgzMD17aWH7QpZiZ2kdm8rWfUVM/view?usp=sharing), 
+[2](https://drive.google.com/file/d/1rfiGfFUV34TA7PS0h5WoP9n6thAsYAeh/view?usp=sharing), 
+[3]())
 >		* [Team](https://drive.google.com/open?id=1arzk6l9_O8YybPrH0kaxIwK0ths6L3fP) / [Tutorial](https://drive.google.com/open?id=1C4UaNbOGimv8jshIyIePxW8_cET9NcnZ) Meeting
 >	* [End User Testing (2019 S2)](https://drive.google.com/open?id=18gqvqGhVzZDWSa4ZrAtFL8qN_p34Or0f)
 >		* [Raw Dataset](https://drive.google.com/open?id=1oOTcOjIXANYLUUetfQKv-XSHVPR-XBBw)
@@ -41,7 +45,7 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 * **[Stakeholder Analysis Chart](https://docs.google.com/document/d/1epvI6XaQV2DkQ-P9564PAwCpmkWzaDA2)**
 
 ### Minimal Viable Product - Iteration 1
-* **[Statement of Work](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)**
+* **[Statement of Work](https://drive.google.com/open?id=1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)**
 * **[User Story Map (Semester 1)](https://drive.google.com/open?id=1PS4gMNf0QJ2Y59hs9PiB_H7XSiubzW37)**
 * **[User Story Map (Semester 2)](https://miro.com/app/board/o9J_ktx1beQ=/)**: Click to reveal the full USM
 [![usm-snapshot](Assets/USM_Snapshot.png)](https://miro.com/app/board/o9J_ktx1beQ=/)
@@ -58,6 +62,7 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 	* Member: **Chunxiang (Carson) Song** (Back-end Developer) _@u6302158_
 	* Member: **Zheng (Henry) Xiang** (Back-end Developer) _@u6469050_
 * Tutor: **Andrea Parsons**, Email: Andrea.Parsons@anu.edu.au
+* [Team with remote members approval agreement](https://drive.google.com/file/d/1sSnSL86ubvxETi3SM4OCQuOqCNMHB_PW/view?usp=sharing)
 ### Stakeholders
 * Client:
 	* Xero: **Amanda Li**, **Shreyas Nagarajappa**, **Han Zhang**, **Mehika Manocha**
