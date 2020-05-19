@@ -44,7 +44,7 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 ### Stakeholder Concerns and Interests
 * **[Stakeholder Analysis Chart](https://docs.google.com/document/d/1epvI6XaQV2DkQ-P9564PAwCpmkWzaDA2)**
 
-### Minimal Viable Product - Iteration 1
+### Minimal Viable Product - 2020 S1
 * **[Statement of Work](https://drive.google.com/open?id=1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)**
 * **[Feature Mind Map (2020 S1)](https://drive.google.com/file/d/13mptTU_BVMKIFpw-GJgYrQAsPAmmu2UL/view?usp=sharing)**: Click to reveal the full map
 ![feature-mind-map](Assets/Feature_Mind_Map.png)
