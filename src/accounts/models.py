@@ -5,8 +5,6 @@ from django.template.defaultfilters import slugify
 from django.urls import reverse
 from .managers import UserManager
 
-
-
 class User(AbstractBaseUser, PermissionsMixin):
     full_name       = models.CharField(_('full name'), max_length=30)
     email           = models.EmailField(_('email address'), unique=True)
@@ -19,7 +17,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['full_name']
+    REQUIRED_FIELDS = ['full_name'] 
 
     class Meta:
         verbose_name = _('user')

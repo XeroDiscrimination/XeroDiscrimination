@@ -1,16 +1,19 @@
 body {
     height: 100%;
-    background-image: url('../image/bg.jpg');
+    background-image: url('../image/bg2.jpg');
+    background-size: 100vw 100vh;
   }
   .form-login {
     width: 100%;
-    max-width: 330px;
+    max-width: 380px;
     padding: 15px;
     margin: 0 auto;
   }
   .form-login{
     margin-top:80px;
-    font-weight: 400;
+    font-weight: 800;
+    box-sizing: border-box;
+    background-color: wheat;
   }
   .form-login .form-control {
     position: relative;
@@ -18,7 +21,6 @@ body {
     height: auto;
     padding: 10px;
     font-size: 16px;
-  
   }
   .form-login .form-control:focus {
     z-index: 2;
@@ -35,7 +37,14 @@ body {
   }
   form a{
     display: inline-block;
-    margin-top:25px;
-    font-size: 12px;
-    line-height: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 35px;
+    border: 1px solid #007bff;
+    border-radius: 2px;
+    background-color: #007bff;
+  }
+  .text-success{
+    color: #ffffff !important;
   }
