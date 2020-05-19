@@ -16,5 +16,28 @@
 
             </ul>
         </div>
+
+        {% if request.session.is_login %}
+            <div class="nav-link">
+                {{ request.session.user_name }}, Welcome.
+            </div>
+            <div class="nav-link">
+                <a href="/logout/">
+                    Log out
+                </a>
+            </div>
+        {% else %}
+            <div class="nav-link">
+                <a href="login">
+                    <button type="button" class="btn btn-primary py-2 mr-1" style="font-size:large;">Log in</button>
+                </a>
+                <a href="register">
+                    <button type="button" class="btn btn-outline-primary py-2 mr-1" style="font-size:large;">Sign Up</button>
+                </a>              
+            </div>
+        {% endif %}
+
     </div>
+
+
 </nav>
