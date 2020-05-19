@@ -40,9 +40,9 @@ urlpatterns = [
     path('company_details/', include('accounts.url') ),
     path('promote_organization', v.recommend_detail, name='recommend_organization'),
 
-    path('index/', lv.index),
-    path('login/', lv.login),
-    path('register/', lv.register),
-    path('logout/', lv.logout),
+    path('', lv.home, name='home'),
+    path('login/', lv.login, name='login'),
+    path('register/', lv.register, name='register'),
+    path('logout/', lv.logout, name='logout'),
     path('captcha/', include('captcha.urls')) 
 ] 
