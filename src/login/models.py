@@ -5,12 +5,11 @@ from django.db import models
 class User(models.Model):
 
     pronouns = (
-        ('they', "they"),
-        ('he', "he"),
-        ('she', "she"),
-        ('zie', "zie"),
-        ('hir', "hir/hirs"),
-        ('na', "N/A"),
+        ('they', "They/Them"),
+        ('he', "He/Him"),
+        ('she', "She/Her"),
+        ('ot', 'Other'),
+        ('na', "Rather not say"),
     )
 
     name = models.CharField(max_length=128, unique=True)

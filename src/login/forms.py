@@ -8,16 +8,16 @@ class UserForm(forms.Form):
 
 class RegisterForm(forms.Form):
     pronouns = (
-        ('they', "they"),
-        ('he', "he"),
-        ('she', "she"),
-        ('zie', "zie"),
-        ('hir', "hir/hirs"),
-        ('na', "N/A"),
+        ('they', "They/Them"),
+        ('he', "He/Him"),
+        ('she', "She/Her"),
+        ('ot', 'Other'),
+        ('na', "Rather not say"),
     )
+
     username = forms.CharField(label="Username", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
     password1 = forms.CharField(label="Password", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label="Confirm password", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     email = forms.EmailField(label="Email address", widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    pronoun = forms.ChoiceField(label='Pronoun', choices=pronouns)
+    pronoun = forms.ChoiceField(label='Pronouns', choices=pronouns)
     captcha = CaptchaField(label='Captcha')

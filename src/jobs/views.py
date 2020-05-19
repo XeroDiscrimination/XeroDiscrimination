@@ -64,10 +64,10 @@ def test(request):
     str3 = str(request.GET["loc"])
     data = Job.objects.filter(job_type=str2)
     data_dir = {'job':data, 'companyname':str1,'jobtype':str2,'loc':str3}
-    return render(request,'testforbackend.html',context=data_dir) 
+    return render(request, 'testforbackend.html', context=data_dir) 
 
 def test1(request):
 
     data = Company.objects.all()
     data_dir = {'company':data}
-    return render(request,'testforbackend-company.html',context=data_dir) 
+    return render(request, 'testforbackend-company.html', context=data_dir) 

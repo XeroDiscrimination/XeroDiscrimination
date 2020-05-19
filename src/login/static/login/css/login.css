@@ -1,19 +1,15 @@
 body {
     height: 100%;
-    background-image: url('../image/bg2.jpg');
+    background-image: url('../image/bg.jpg');
     background-size: 100vw 100vh;
   }
-  .form-login {
-    width: 100%;
-    max-width: 380px;
-    padding: 15px;
-    margin: 0 auto;
-  }
   .form-login{
-    margin-top:80px;
-    font-weight: 800;
-    box-sizing: border-box;
-    background-color: wheat;
+    position: relative;
+    top: 50%;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    border: none;
   }
   .form-login .form-control {
     position: relative;
@@ -34,6 +30,9 @@ body {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+  }
+  .form-group {
+    margin-bottom: 5px;
   }
   form a{
     display: inline-block;
