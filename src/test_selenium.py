@@ -37,17 +37,22 @@ class AutomatedTest(unittest.TestCase):
         # Arrange
         driver = self.driver
         # Act: click links in NavBar should go to corresponding page
-        click1 = driver.find_element_by_xpath('//a[contains(text(), "Zero Discrimination")]').click()
-        click2 = driver.find_element_by_xpath('//a[contains(text(), "Home")]').click()
-        click3 = driver.find_element_by_xpath('//a[contains(text(), "About Us")]').click()
-        click4 = driver.find_element_by_xpath('//a[contains(text(), "Partners")]').click()
-        click5 = driver.find_element_by_xpath('//a[contains(text(), "Contact")]').click()
+        driver.find_element_by_xpath('//a[contains(text(), "Zero Discrimination")]').click()
+        url1 = driver.current_url
+        driver.find_element_by_xpath('//a[contains(text(), "Home")]').click()
+        url2 = driver.current_url
+        driver.find_element_by_xpath('//a[contains(text(), "About Us")]').click()
+        url3 = driver.current_url
+        driver.find_element_by_xpath('//a[contains(text(), "Partners")]').click()
+        url4 = driver.current_url
+        driver.find_element_by_xpath('//a[contains(text(), "Contact")]').click()
+        url5 = driver.current_url
         # Assert
-        self.assertEqual("http://127.0.0.1:8000/", click1.current_url, "Click navBar ZeroDiscrimination should go to index page")
-        self.assertEqual("http://127.0.0.1:8000/", click2.current_url, "Click navBar Home should go to index page")
-        self.assertEqual("http://127.0.0.1:8000/about/", click3.current_url, "Click navBar About Us should go to about page")
-        self.assertEqual("http://127.0.0.1:8000/rainbow_tick/", click4.current_url, "Click navBar About Us should go to rainbow_tick page")
-        self.assertEqual("http://127.0.0.1:8000/contact/", click5.current_url, "Click navBar About Us should go to contact page")
+        self.assertEqual("http://127.0.0.1:8000/", url1, "Click navBar ZeroDiscrimination should go to index page")
+        self.assertEqual("http://127.0.0.1:8000/", url2, "Click navBar Home should go to index page")
+        self.assertEqual("http://127.0.0.1:8000/about/", url3, "Click navBar About Us should go to about page")
+        self.assertEqual("http://127.0.0.1:8000/rainbow_tick/", url4, "Click navBar About Us should go to rainbow_tick page")
+        self.assertEqual("http://127.0.0.1:8000/contact/", url5, "Click navBar About Us should go to contact page")
 
     def tearDown(self):
         self.driver.close()
