@@ -22,3 +22,8 @@ settings.json
 */__pycache__
 __pycache__/
 >>>>>>> f1117eaa19a1fe3b42f57316a1203b8afaea0ab9
+venv
+.idea
+settings.py
+db.sqlite3
+mysite/__pycache__/
