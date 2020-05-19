@@ -5,13 +5,15 @@ body {
   }
   .form-login {
     width: 100%;
-    max-width: 330px;
+    max-width: 380px;
     padding: 15px;
     margin: 0 auto;
   }
   .form-login{
     margin-top:80px;
     font-weight: 800;
+    box-sizing: border-box;
+    background-color: wheat;
   }
   .form-login .form-control {
     position: relative;
