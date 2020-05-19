@@ -72,8 +72,6 @@ class Applicant(models.Model):
     def __str__(self):
         return self.user.full_name
 
-
-
 class Company(models.Model):
     user        = models.OneToOneField(User, on_delete=models.CASCADE)
     name        = models.CharField(_('company name'), max_length=50, null=True, blank=True)
@@ -121,6 +119,7 @@ class Recommendations(models.Model):
 
     class Meta:
         ordering = ['created_on']
+        verbose_name_plural = 'Recommendations'
 
     def __str__(self):
         return 'Recommend {} by {}'.format(self.organization, self.name)
