@@ -56,11 +56,11 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 ## :round_pushpin: Project Team and Stakeholders
 ### Team Structure
 * Rainbow 7:
-	* Member: **Utkarsh Marwaha** (Architect, Communicator, Developer) _@u6146791_
-	* Member: **Zhengqin (Raymond) Luo** (Front-end Developer, UI Designer, Communicator, Lead Tester) _@u5469010_
 	* Spokesperson: **Yilu (Karmick) Liu** (Front-end Developer, UI Designer, Coordinator) _@u6270742_
-	* Member: **Yishun (Ethan) Shi** (Front-end Developer, Tester) _@u6598369_
 	* Spokesperson: **Jianzhen (Olivia) Long** (Back-end Developer, Tester) _@u5474453_
+	* Member: **Zhengqin (Raymond) Luo** (Front-end Developer, UI Designer, Communicator, Lead Tester) _@u5469010_
+	* Member: **Utkarsh Marwaha** (Architect, Communicator, Developer) _@u6146791_
+	* Member: **Yishun (Ethan) Shi** (Front-end Developer, Tester) _@u6598369_
 	* Member: **Chunxiang (Carson) Song** (Back-end Developer) _@u6302158_
 	* Member: **Zheng (Henry) Xiang** (Back-end Developer) _@u6469050_
 * Tutor: **Andrea Parsons**, Email: Andrea.Parsons@anu.edu.au
