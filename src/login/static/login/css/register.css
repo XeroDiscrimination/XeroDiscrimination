@@ -1,6 +1,6 @@
 body {
     height: 100%;
-    background-image: url('../image/bg2.jpg');
+    background-image: url('../image/bg.jpg');
     background-size: 100vw 100vh;
   }
   .form-register {
@@ -8,12 +8,11 @@ body {
     top: 50%;
     width: 100%;
     max-width: 400px;
-    padding: 15px;
     margin: 50px auto;
+    border: none;
   }
   .form-group {
     margin-bottom: 5px;
-    font-weight: 800;
   }
   /* form a{
     display: inline-block;

@@ -24,7 +24,7 @@ def login(request):
         return redirect('/index/')
     if request.method == 'POST':
         login_form = forms.UserForm(request.POST)
-        message = 'Please check the filled in content！'
+        message = 'Please check the filled in content.'
         if login_form.is_valid():
             username = login_form.cleaned_data.get('username')
             password = login_form.cleaned_data.get('password')
@@ -32,7 +32,7 @@ def login(request):
             try:
                 user = models.User.objects.get(name=username)
             except :
-                message = 'Username does not exist！'
+                message = 'Username does not exist.'
                 return render(request, 'login/login.html', locals())
 
             if user.password == hash_code(password):
@@ -41,7 +41,7 @@ def login(request):
                 request.session['user_name'] = user.name
                 return redirect('/index/')
             else:
-                message = 'Incorrect password！'
+                message = 'Incorrect password.'
                 return render(request, 'login/login.html', locals())
         else:
             return render(request, 'login/login.html', locals())
@@ -56,7 +56,7 @@ def register(request):
 
     if request.method == 'POST':
         register_form = forms.RegisterForm(request.POST)
-        message = "Please check the filled in content！！"
+        message = "Please check the content you entered."
         if register_form.is_valid():
             username = register_form.cleaned_data.get('username')
             password1 = register_form.cleaned_data.get('password1')
@@ -65,7 +65,7 @@ def register(request):
             sex = register_form.cleaned_data.get('sex')
 
             if password1 != password2:
-                message = 'The password entered twice is different！'
+                message = 'Password mismatch.'
                 return render(request, 'login/register.html', locals())
             else:
                 same_name_user = models.User.objects.filter(name=username)
@@ -74,7 +74,7 @@ def register(request):
                     return render(request, 'login/register.html', locals())
                 same_email_user = models.User.objects.filter(email=email)
                 if same_email_user:
-                    message = 'The mailbox has already been registered！'
+                    message = 'This email address has already been registered.'
                     return render(request, 'login/register.html', locals())
 
                 new_user = models.User()
