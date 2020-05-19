@@ -42,6 +42,7 @@ Due to systematic and direct discrimination, young people in LGBTIQ communities 
 * **[Statement of Work](https://drive.google.com/drive/folders/1qOL4Du4DMxNp0jUrjw0eTDZJfbZcw_oE)**
 * **[User Story Map (Semester 1)](https://drive.google.com/open?id=1PS4gMNf0QJ2Y59hs9PiB_H7XSiubzW37)**
 * **[User Story Map (Semester 2)](https://miro.com/app/board/o9J_ktx1beQ=/)**
+[![usm-snapshot](Assets/USM_Snapshot.png)](https://miro.com/app/board/o9J_ktx1beQ=/)
 
 
 ## :round_pushpin: Project Team and Stakeholders
