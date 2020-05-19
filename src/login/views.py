@@ -71,7 +71,7 @@ def register(request):
                     message = 'Username already exists'
                     return render(request, 'register.html', locals())
                 same_email_user = models.User.objects.filter(email=email)
-                if same_email_user:
+                if same_email_user: 
                     message = 'This email address has already been registered.'
                     return render(request, 'register.html', locals())
 
