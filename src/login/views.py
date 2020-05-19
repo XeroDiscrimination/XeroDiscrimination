@@ -19,7 +19,7 @@ def home(request):
 
 def login(request):
     if request.session.get('is_login', None):  # No repeat login
-        return render(request, 'index.html')
+        return redirect('/')
     if request.method == 'POST':
         login_form = forms.UserForm(request.POST)
         message = 'Please check the filled in content.'
@@ -37,7 +37,7 @@ def login(request):
                 request.session['is_login'] = True
                 request.session['user_id'] = user.id
                 request.session['user_name'] = user.name
-                return render(request, 'index.html')
+                return redirect('/')
             else:
                 message = 'Incorrect password.'
                 return render(request, 'login.html', locals())
@@ -50,7 +50,7 @@ def login(request):
 
 def register(request):
     if request.session.get('is_login', None):
-        return render(request, 'index.html')
+        return redirect('/')
 
     if request.method == 'POST':
         register_form = forms.RegisterForm(request.POST)
