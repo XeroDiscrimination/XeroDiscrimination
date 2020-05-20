@@ -17,7 +17,7 @@ class AutomatedTest(unittest.TestCase):
     def setUp(self):
         self.driver = Chrome(executable_path='/opt/WebDriver/bin/chromedriver')
         self.driver.get(self.baseUrl)
-        # self.driver.maximize_window()
+        self.driver.maximize_window()
 
     # @unittest.SkipTest
     def test_navBar(self):
