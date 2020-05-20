@@ -23,7 +23,7 @@ class UserAdminCreationForm(forms.ModelForm):
         password1 = data.get('password1')
         password2 = data.get('password2')
         if password1 and password2 and password1 != password2:
-            raise forms.ValidationError('The passwords you entered are not the same')
+            raise forms.ValidationError('The passwords you entered are not the same.')
         return password1
 
     def save(self, commit=True):
