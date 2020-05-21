@@ -29,6 +29,9 @@ TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 >	* [Automated Testing (2020 S1)](https://docs.google.com/document/d/1goGjxbINq-eNTyM5asZ51fhx1P8zTlKmH7IWhRiwIBw/edit?usp=sharing)
 >	* [Showcase Poster (2019 S2)](https://drive.google.com/open?id=1ltiUQCcyGbkt4VDQtEBzp-M4R6VGYLvE)
 >	* [Showcase Poster (2020 S1)](https://drive.google.com/file/d/1GGG16kWNh-AtCTrQzY3W8r8fJrOEjsFv/view?usp=sharing)
+> * **Quickstart Manuals**
+>	* ["How to setup backend environment and access to admin portal?"](https://drive.google.com/drive/folders/18UUG6WpywMkE7DYVT3HmOiQTI7lo9H-O?usp=sharing)
+>	* ["How to setup Selenium Automation?"](https://drive.google.com/open?id=1goGjxbINq-eNTyM5asZ51fhx1P8zTlKmH7IWhRiwIBw)
 > * **Supporting Documents**
 >	* [End User Testing Session Snapshots](https://drive.google.com/open?id=15zp7NXvwh1mF8rbWCacpLxMA0dr5QOzW)
 >	* [Client Meeting Snapshots](https://drive.google.com/drive/folders/1WJXr71ocib6bxigVTzI6vIyjT1Pv-xET?usp=sharing)
