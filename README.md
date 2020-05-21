@@ -32,6 +32,7 @@ TechLauncher Project 2020 S1 | Code: 19-S2-2-C Xero Discrimination
 > * **Quickstart Manuals**
 >	* ["How to setup backend environment and access to admin portal?"](https://drive.google.com/drive/folders/18UUG6WpywMkE7DYVT3HmOiQTI7lo9H-O?usp=sharing)
 >	* ["How to setup Selenium Automation?"](https://drive.google.com/open?id=1goGjxbINq-eNTyM5asZ51fhx1P8zTlKmH7IWhRiwIBw)
+> * [**Product Quick Demo**](https://youtu.be/O427NohgeQE) (Link to Demo Clip)
 > * **Supporting Documents**
 >	* [End User Testing Session Snapshots](https://drive.google.com/open?id=15zp7NXvwh1mF8rbWCacpLxMA0dr5QOzW)
 >	* [Client Meeting Snapshots](https://drive.google.com/drive/folders/1WJXr71ocib6bxigVTzI6vIyjT1Pv-xET?usp=sharing)
